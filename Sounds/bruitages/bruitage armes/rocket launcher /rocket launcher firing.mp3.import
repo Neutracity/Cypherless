@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b7hgtlyfa0qyx"
+path="res://.godot/imported/rocket launcher firing.mp3-86500e47fd63283bf1f0a955a7783377.mp3str"
+
+[deps]
+
+source_file="res://Sounds/bruitages/bruitage armes/rocket launcher /rocket launcher firing.mp3"
+dest_files=["res://.godot/imported/rocket launcher firing.mp3-86500e47fd63283bf1f0a955a7783377.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

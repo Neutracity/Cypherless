@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://1jtpo3xekfym"]
+
+[ext_resource type="Script" uid="uid://djudao7u182at" path="res://scripts/Entities/enemies/EnnemySpawner.cs" id="1_cwit4"]
+[ext_resource type="PackedScene" uid="uid://b0ix2dkplrhgh" path="res://scenes/Entities/Ennemies/melee_enemy.tscn" id="1_xivmo"]
+[ext_resource type="PackedScene" uid="uid://dip3gg5xw38fd" path="res://scenes/Entities/Ennemies/ranged_enemy.tscn" id="3_g7l4m"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_8etmk"]
+size = Vector3(1.8, 0.03, 0.41)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_xivmo"]
+data = PackedVector3Array(-0.9, 0.015, 0.205, 0.9, 0.015, 0.205, -0.9, -0.015, 0.205, 0.9, 0.015, 0.205, 0.9, -0.015, 0.205, -0.9, -0.015, 0.205, 0.9, 0.015, -0.205, -0.9, 0.015, -0.205, 0.9, -0.015, -0.205, -0.9, 0.015, -0.205, -0.9, -0.015, -0.205, 0.9, -0.015, -0.205, 0.9, 0.015, 0.205, 0.9, 0.015, -0.205, 0.9, -0.015, 0.205, 0.9, 0.015, -0.205, 0.9, -0.015, -0.205, 0.9, -0.015, 0.205, -0.9, 0.015, -0.205, -0.9, 0.015, 0.205, -0.9, -0.015, -0.205, -0.9, 0.015, 0.205, -0.9, -0.015, 0.205, -0.9, -0.015, -0.205, 0.9, 0.015, 0.205, -0.9, 0.015, 0.205, 0.9, 0.015, -0.205, -0.9, 0.015, 0.205, -0.9, 0.015, -0.205, 0.9, 0.015, -0.205, -0.9, -0.015, 0.205, 0.9, -0.015, 0.205, -0.9, -0.015, -0.205, 0.9, -0.015, 0.205, 0.9, -0.015, -0.205, -0.9, -0.015, -0.205)
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_ad5lo"]
+vertices = PackedVector3Array(-0.9, 0.015, 0.205, 0.9, 0.015, -0.205, 0.9, 0.015, 0.205, -0.9, 0.015, -0.205, -0.9, -0.015, 0.205, 0.9, -0.015, -0.205, 0.9, -0.015, 0.205, -0.9, -0.015, -0.205, 0.9, 0.015, 0.205, -0.9, 0.015, -0.205, 0.9, 0.015, -0.205, -0.9, 0.015, 0.205, 0.9, -0.015, 0.205, -0.9, -0.015, -0.205, 0.9, -0.015, -0.205, -0.9, -0.015, 0.205, 0.9, 0.015, 0.205, -0.9, -0.015, 0.205, -0.9, 0.015, 0.205, 0.9, -0.015, 0.205, 0.9, 0.015, -0.205, -0.9, -0.015, -0.205, -0.9, 0.015, -0.205, 0.9, -0.015, -0.205)
+polygons = [PackedInt32Array(0, 2, 4), PackedInt32Array(2, 6, 4), PackedInt32Array(1, 3, 5), PackedInt32Array(3, 7, 5), PackedInt32Array(8, 10, 12), PackedInt32Array(10, 14, 12), PackedInt32Array(9, 11, 13), PackedInt32Array(11, 15, 13), PackedInt32Array(16, 18, 20), PackedInt32Array(18, 22, 20), PackedInt32Array(17, 19, 21), PackedInt32Array(19, 23, 21)]
+
+[node name="DEBUG_Test_online" type="Node3D" unique_id=1538363108]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1482026002]
+transform = Transform3D(4.49347, 0, 0, 0, 4.49347, 0, 0, 0, 4.49347, 0, 0, 0)
+mesh = SubResource("BoxMesh_8etmk")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D" unique_id=1259022058]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D" unique_id=124415120]
+shape = SubResource("ConcavePolygonShape3D_xivmo")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1372409323]
+transform = Transform3D(4.49347, 0, 0, 0, 4.49347, 0, 0, 0, 4.49347, -8.02914, 1.44431, 0)
+mesh = SubResource("BoxMesh_8etmk")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D2" unique_id=1555833397]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D2/StaticBody3D" unique_id=1580190111]
+shape = SubResource("ConcavePolygonShape3D_xivmo")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=236181703]
+transform = Transform3D(4.49347, 0, 0, 0, 4.49347, 0, 0, 0, 4.49347, 8.40408, 1.25556, -9.53674e-07)
+mesh = SubResource("BoxMesh_8etmk")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D3" unique_id=1132643092]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D3/StaticBody3D" unique_id=820216062]
+shape = SubResource("ConcavePolygonShape3D_xivmo")
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="MeshInstance3D3" unique_id=1867355413]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0222545, 0)
+navigation_mesh = SubResource("NavigationMesh_ad5lo")
+
+[node name="Arene" type="Node3D" parent="." unique_id=1698652169]
+
+[node name="SpawnPoint" type="Marker3D" parent="Arene" unique_id=1719046071]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.22259, 0)
+
+[node name="Marker3D" type="Marker3D" parent="." unique_id=1719208206]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 2.64943, 0)
+script = ExtResource("1_cwit4")
+MeleeEnemyScene = ExtResource("1_xivmo")
+RangedEnemyScene = ExtResource("3_g7l4m")

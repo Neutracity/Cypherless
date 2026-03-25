@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://cf18rmymt2xy"]
+
+[ext_resource type="Shader" uid="uid://bgropnys1f670" path="res://scenes/outline.gdshader" id="1_x6nd2"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gfuh0"]
+
+[resource]
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_gfuh0")
+shader = ExtResource("1_x6nd2")
+shader_parameter/outline_color = Color(0.533943, 0.659704, 0.831454, 1)
+shader_parameter/outline_width = 10.0
+shader_parameter/visible = true

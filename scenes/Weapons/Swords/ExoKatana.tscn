@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://1oes7d2e5s6j"]
+
+[ext_resource type="Script" uid="uid://t56bpkkdha8" path="res://scripts/Weapons/Swords/Sword1.cs" id="1_5ncwk"]
+[ext_resource type="PackedScene" uid="uid://dp232stklgwtg" path="res://3d-assets/Weapons/Swords/EXOkatana.glb" id="2_5ncwk"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5ncwk"]
+custom_solver_bias = 1.0
+size = Vector3(0.0681, 1.23969, 0.0571899)
+
+[node name="ExoKatana" type="Node3D"]
+script = ExtResource("1_5ncwk")
+metadata/test_scene = "res://scenes/Maps/DEBUG_TestScene.tscn"
+
+[node name="UseCooldown" type="Timer" parent="."]
+one_shot = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0617763, 0.483612, -0.016697)
+shape = SubResource("BoxShape3D_5ncwk")
+
+[node name="WeaponMeshHolder" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0622312, 0, -0.0189859)
+
+[node name="EXOkatana2" parent="WeaponMeshHolder" instance=ExtResource("2_5ncwk")]

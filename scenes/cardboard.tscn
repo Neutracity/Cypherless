@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://dmvj0qlg42tw2"]
+
+[ext_resource type="PackedScene" uid="uid://dt34ospgnfkr4" path="res://3d-assets/Custom-asset/carboard.glb" id="1_ecprd"]
+[ext_resource type="Script" uid="uid://yrnrfh6d2w5g" path="res://scripts/Cardboard.cs" id="1_xjuv7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vwpmr"]
+size = Vector3(0.738281, 0.736084, 0.96582)
+
+[sub_resource type="BoxMesh" id="BoxMesh_b21up"]
+size = Vector3(0.2, 0.05, 0.1)
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_exscx"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 2
+properties/1/path = NodePath(".:rotation")
+properties/1/spawn = true
+properties/1/replication_mode = 2
+
+[node name="Cardboard" type="Node3D" unique_id=1157064565]
+script = ExtResource("1_xjuv7")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=1514353310]
+collision_layer = 8
+collision_mask = 31
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=1605728975]
+shape = SubResource("BoxShape3D_vwpmr")
+
+[node name="3DModel" parent="RigidBody3D" unique_id=1960349407 instance=ExtResource("1_ecprd")]
+transform = Transform3D(0.662486, 0, 0, 0, 0.662486, 0, 0, 0, 0.662486, 0, 0, 0)
+
+[node name="POP" type="CPUParticles3D" parent="RigidBody3D" unique_id=79690240]
+transform = Transform3D(1.31364, 0, 0, 0, 1.31364, 0, 0, 0, 1.31364, 0, 0.0156858, 0)
+emitting = false
+amount = 128
+lifetime = 0.29
+speed_scale = 0.52
+explosiveness = 0.11
+randomness = 0.62
+lifetime_randomness = 0.64
+mesh = SubResource("BoxMesh_b21up")
+emission_shape = 3
+emission_box_extents = Vector3(0.25, 0.25, 0.25)
+particle_flag_rotate_y = true
+direction = Vector3(0, 1, 0)
+spread = 16.19
+gravity = Vector3(0, -200, 0)
+initial_velocity_min = 6.58
+initial_velocity_max = 20.0
+angular_velocity_max = 720.0
+angle_max = 720.0
+scale_amount_min = 0.75
+scale_amount_max = 1.5
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="." unique_id=1012451021]
+replication_config = SubResource("SceneReplicationConfig_exscx")
+
+[connection signal="sleeping_state_changed" from="RigidBody3D" to="." method="Sleepingstatechanged"]

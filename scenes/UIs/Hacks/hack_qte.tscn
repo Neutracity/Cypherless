@@ -1,0 +1,579 @@
+[gd_scene load_steps=32 format=3 uid="uid://b0u3i5uv86qja"]
+
+[ext_resource type="Texture2D" uid="uid://dy48oy2qoohgq" path="res://2d-assets/Hacking interfaces/hack_bg.jpg" id="1_302rp"]
+[ext_resource type="Texture2D" uid="uid://6boasgrhcuoe" path="res://2d-assets/Hacking interfaces/hack_qte_symbol_1.png" id="2_3bfaj"]
+[ext_resource type="Script" uid="uid://kbgqpy1pjyxl" path="res://scripts/hacks/HackQteAnimations.cs" id="2_6n78l"]
+[ext_resource type="Texture2D" uid="uid://d1pnc82g4pm8o" path="res://2d-assets/Hacking interfaces/hack_qte_symbol_1_grey.png" id="3_vncd6"]
+[ext_resource type="Texture2D" uid="uid://cl58cm3cw204o" path="res://2d-assets/Hacking interfaces/hack_qte_bar.png" id="3_vq4sn"]
+[ext_resource type="Texture2D" uid="uid://cee7g00qggc2w" path="res://2d-assets/Hacking interfaces/hack_qte_symbol_2.png" id="4_1hn17"]
+[ext_resource type="Texture2D" uid="uid://bl7uir2wvlnlt" path="res://2d-assets/Hacking interfaces/hack_qte_symbol_3.png" id="5_w5c68"]
+[ext_resource type="Texture2D" uid="uid://doli2oq823nnj" path="res://2d-assets/Hacking interfaces/hack_qte_symbol_2_grey.png" id="6_lk0ag"]
+[ext_resource type="Texture2D" uid="uid://062dvka2e6l6" path="res://2d-assets/Hacking interfaces/hack_qte_symbol_4.png" id="6_xtdir"]
+[ext_resource type="Texture2D" uid="uid://nij5x8b0lknf" path="res://2d-assets/Hacking interfaces/hack_qte_symbol_5.png" id="7_vimg2"]
+[ext_resource type="Texture2D" uid="uid://os52fwwfum85" path="res://2d-assets/Hacking interfaces/hack_qte_symbol_3_gey.png" id="8_in18k"]
+[ext_resource type="Texture2D" uid="uid://bkx7f1vkvui41" path="res://2d-assets/Hacking interfaces/hack_qte_area.png" id="8_sft62"]
+[ext_resource type="Texture2D" uid="uid://wu1biloqo15y" path="res://2d-assets/Hacking interfaces/hack_qte_tick.png" id="9_rrbxo"]
+[ext_resource type="Texture2D" uid="uid://oc44uuvkoq8w" path="res://2d-assets/Hacking interfaces/hack_qte_symbol_4_gey.png" id="10_hf2i0"]
+[ext_resource type="Texture2D" uid="uid://do2e7qwuxpikl" path="res://2d-assets/Hacking interfaces/hack_qte_symbol_5_grey.png" id="12_dcy07"]
+[ext_resource type="Texture2D" uid="uid://b16g2us0heoin" path="res://2d-assets/Hacking interfaces/hack_qte_area_wrong.png" id="15_j155f"]
+
+[sub_resource type="Animation" id="Animation_1618v"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("tick_1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(256, 200)]
+}
+
+[sub_resource type="Animation" id="Animation_k7qw2"]
+resource_name = "tick1"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("tick_1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(256, 200), Vector2(720, 200)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k11k2"]
+_data = {
+&"RESET": SubResource("Animation_1618v"),
+&"tick1": SubResource("Animation_k7qw2")
+}
+
+[sub_resource type="Animation" id="Animation_28gfq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("background/tick_2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(256, 311)]
+}
+
+[sub_resource type="Animation" id="Animation_ajlka"]
+resource_name = "tick2"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("background/tick_2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(256, 311), Vector2(720, 311)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_keggi"]
+_data = {
+&"RESET": SubResource("Animation_28gfq"),
+&"tick2": SubResource("Animation_ajlka")
+}
+
+[sub_resource type="Animation" id="Animation_24ilt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("tick_3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(256, 420)]
+}
+
+[sub_resource type="Animation" id="Animation_2ag3e"]
+resource_name = "tick3"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("tick_3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(256, 420), Vector2(720, 420)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cegoa"]
+_data = {
+&"RESET": SubResource("Animation_24ilt"),
+&"tick3": SubResource("Animation_2ag3e")
+}
+
+[sub_resource type="Animation" id="Animation_mtf0q"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("tick_4:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(256, 530)]
+}
+
+[sub_resource type="Animation" id="Animation_ama2f"]
+resource_name = "tick4"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("tick_4:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(256, 530), Vector2(720, 530)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_knt4n"]
+_data = {
+&"RESET": SubResource("Animation_mtf0q"),
+&"tick4": SubResource("Animation_ama2f")
+}
+
+[sub_resource type="Animation" id="Animation_bxmwm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../tick_5:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(256, 638)]
+}
+
+[sub_resource type="Animation" id="Animation_qmyp2"]
+resource_name = "tick5"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../tick_5:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(256, 638), Vector2(720, 638)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wjrsh"]
+_data = {
+&"RESET": SubResource("Animation_bxmwm"),
+&"tick5": SubResource("Animation_qmyp2")
+}
+
+[node name="background" type="TextureRect"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -450.0
+offset_top = -450.0
+offset_right = 450.0
+offset_bottom = 450.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_302rp")
+expand_mode = 5
+script = ExtResource("2_6n78l")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -294.0
+offset_top = -272.0
+offset_right = 304.0
+offset_bottom = 271.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer1" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+
+[node name="button1" type="TextureButton" parent="VBoxContainer/HBoxContainer1"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("2_3bfaj")
+texture_hover = ExtResource("3_vncd6")
+stretch_mode = 3
+
+[node name="bar1" type="TextureRect" parent="VBoxContainer/HBoxContainer1"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("3_vq4sn")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="tick1_anim" type="AnimationPlayer" parent="VBoxContainer/HBoxContainer1"]
+root_node = NodePath("../../..")
+libraries = {
+&"": SubResource("AnimationLibrary_k11k2")
+}
+autoplay = "tick1"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+
+[node name="button2" type="TextureButton" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("4_1hn17")
+texture_hover = ExtResource("6_lk0ag")
+stretch_mode = 3
+
+[node name="bar2" type="TextureRect" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("3_vq4sn")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="tick2_anim" type="AnimationPlayer" parent="VBoxContainer/HBoxContainer2"]
+root_node = NodePath("../../../..")
+libraries = {
+&"": SubResource("AnimationLibrary_keggi")
+}
+autoplay = "tick2"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+
+[node name="button3" type="TextureButton" parent="VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("5_w5c68")
+texture_hover = ExtResource("8_in18k")
+stretch_mode = 3
+
+[node name="bar3" type="TextureRect" parent="VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("3_vq4sn")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="tick3_anim" type="AnimationPlayer" parent="VBoxContainer/HBoxContainer3"]
+root_node = NodePath("../../..")
+libraries = {
+&"": SubResource("AnimationLibrary_cegoa")
+}
+autoplay = "tick3"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+
+[node name="button4" type="TextureButton" parent="VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("6_xtdir")
+texture_hover = ExtResource("10_hf2i0")
+stretch_mode = 3
+
+[node name="bar4" type="TextureRect" parent="VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("3_vq4sn")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="tick4_anim" type="AnimationPlayer" parent="VBoxContainer/HBoxContainer4"]
+root_node = NodePath("../../..")
+libraries = {
+&"": SubResource("AnimationLibrary_knt4n")
+}
+autoplay = "tick4"
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+
+[node name="button5" type="TextureButton" parent="VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("7_vimg2")
+texture_hover = ExtResource("12_dcy07")
+stretch_mode = 3
+
+[node name="bar5" type="TextureRect" parent="VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("3_vq4sn")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="tick5_anim" type="AnimationPlayer" parent="VBoxContainer/HBoxContainer5"]
+root_node = NodePath("../../../tick_4")
+libraries = {
+&"": SubResource("AnimationLibrary_wjrsh")
+}
+autoplay = "tick5"
+
+[node name="area_1" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -62.0
+offset_top = -231.0
+offset_right = 7.0
+offset_bottom = -208.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+texture = ExtResource("8_sft62")
+expand_mode = 1
+
+[node name="wrong" type="TextureRect" parent="area_1"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+texture = ExtResource("15_j155f")
+
+[node name="area_2" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 108.0
+offset_top = -122.0
+offset_right = 177.0
+offset_bottom = -99.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+texture = ExtResource("8_sft62")
+expand_mode = 1
+
+[node name="wrong" type="TextureRect" parent="area_2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+texture = ExtResource("15_j155f")
+
+[node name="area_3" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.502
+anchor_top = 0.5
+anchor_right = 0.502
+anchor_bottom = 0.5
+offset_left = -32.8
+offset_top = -12.0
+offset_right = 33.2
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+texture = ExtResource("8_sft62")
+expand_mode = 1
+
+[node name="wrong" type="TextureRect" parent="area_3"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+texture = ExtResource("15_j155f")
+
+[node name="area_4" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.445
+anchor_top = 0.621
+anchor_right = 0.445
+anchor_bottom = 0.621
+offset_left = -34.5
+offset_top = -11.9
+offset_right = 34.5
+offset_bottom = 11.1
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+texture = ExtResource("8_sft62")
+expand_mode = 1
+
+[node name="wrong" type="TextureRect" parent="area_4"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+texture = ExtResource("15_j155f")
+
+[node name="area_5" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.61
+anchor_top = 0.742
+anchor_right = 0.61
+anchor_bottom = 0.742
+offset_left = -33.0
+offset_top = -10.8
+offset_right = 33.0
+offset_bottom = 11.2
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+texture = ExtResource("8_sft62")
+expand_mode = 1
+
+[node name="wrong" type="TextureRect" parent="area_5"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+texture = ExtResource("15_j155f")
+
+[node name="tick_1" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.307
+anchor_top = 0.256
+anchor_right = 0.307
+anchor_bottom = 0.256
+offset_left = -20.3
+offset_top = -30.4
+offset_right = 19.7
+offset_bottom = 29.6
+texture = ExtResource("9_rrbxo")
+
+[node name="tick_2" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.307
+anchor_top = 0.378
+anchor_right = 0.307
+anchor_bottom = 0.378
+offset_left = -20.3
+offset_top = -29.2
+offset_right = 19.7
+offset_bottom = 30.8
+texture = ExtResource("9_rrbxo")
+
+[node name="tick_3" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.307
+anchor_top = 0.5
+anchor_right = 0.307
+anchor_bottom = 0.5
+offset_left = -20.3
+offset_top = -30.0
+offset_right = 19.7
+offset_bottom = 30.0
+texture = ExtResource("9_rrbxo")
+
+[node name="tick_4" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.307
+anchor_top = 0.621
+anchor_right = 0.307
+anchor_bottom = 0.621
+offset_left = -20.3
+offset_top = -28.9
+offset_right = 19.7
+offset_bottom = 31.1
+texture = ExtResource("9_rrbxo")
+
+[node name="tick_5" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.307
+anchor_top = 0.742
+anchor_right = 0.307
+anchor_bottom = 0.742
+offset_left = -20.3
+offset_top = -29.8
+offset_right = 19.7
+offset_bottom = 30.2
+texture = ExtResource("9_rrbxo")
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer1/button1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer3/button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer4/button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer5/button5" to="." method="_on_button_5_pressed"]

@@ -1,0 +1,112 @@
+[gd_scene load_steps=10 format=3 uid="uid://c0fvl6m66ojlh"]
+
+[ext_resource type="Script" uid="uid://di70h54hj42s1" path="res://scripts/uis/DeathScreen.cs" id="1_24nvk"]
+[ext_resource type="FontFile" uid="uid://drbtxw0ykfxk4" path="res://2d-assets/Fonts/Orbitron - Police/Orbitron-VariableFont_wght.ttf" id="2_dpa1w"]
+[ext_resource type="Texture2D" uid="uid://c4wqevofk4y0t" path="res://2d-assets/Logos/Logo Cypherless.png" id="2_vntql"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5lkqp"]
+bg_color = Color(0, 0, 0, 0.717647)
+
+[sub_resource type="LabelSettings" id="LabelSettings_lvt7r"]
+font = ExtResource("2_dpa1w")
+font_size = 75
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m10f1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dteu2"]
+bg_color = Color(0.834788, 0.355428, 1.92523e-07, 0.756863)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6arle"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vdbge"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="DeathScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_24nvk")
+
+[node name="shade" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5lkqp")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -571.5
+offset_top = -457.0
+offset_right = 571.5
+offset_bottom = 457.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme_override_constants/margin_bottom = 78
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="cypherless_logo" type="TextureRect" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(1300, 0)
+layout_mode = 2
+texture = ExtResource("2_vntql")
+expand_mode = 5
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+text = "Vous êtes mort(e) !"
+label_settings = SubResource("LabelSettings_lvt7r")
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 18
+
+[node name="resume_button" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(500, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_fonts/font = ExtResource("2_dpa1w")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/focus = SubResource("StyleBoxEmpty_m10f1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dteu2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_6arle")
+theme_override_styles/normal = SubResource("StyleBoxFlat_vdbge")
+text = "Recommencer"
+
+[node name="main_menu_button" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(500, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_fonts/font = ExtResource("2_dpa1w")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/focus = SubResource("StyleBoxEmpty_m10f1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dteu2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_6arle")
+theme_override_styles/normal = SubResource("StyleBoxFlat_vdbge")
+text = "Menu principal"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/resume_button" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/main_menu_button" to="." method="_on_main_menu_button_pressed"]

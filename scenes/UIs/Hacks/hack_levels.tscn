@@ -1,0 +1,223 @@
+[gd_scene load_steps=13 format=3 uid="uid://dfrvit8ygyx4j"]
+
+[ext_resource type="Script" path="res://scripts/hacks/HackLevels.cs" id="1_ri61o"]
+[ext_resource type="FontFile" uid="uid://drbtxw0ykfxk4" path="res://2d-assets/Fonts/Orbitron - Police/Orbitron-VariableFont_wght.ttf" id="2_0hmqx"]
+[ext_resource type="Texture2D" uid="uid://bwd651sg0yfdc" path="res://2d-assets/Hacking interfaces/hack_bg.jpg" id="2_sst4i"]
+[ext_resource type="Texture2D" uid="uid://c51vjoredn3hv" path="res://2d-assets/Hacking interfaces/hack_fluids_1.png" id="3_re5f5"]
+[ext_resource type="Texture2D" uid="uid://dlyrory4fc4b6" path="res://2d-assets/Hacking interfaces/hack_fluids_2.png" id="4_ntqxp"]
+[ext_resource type="Texture2D" uid="uid://bbf3r8rrlrpud" path="res://2d-assets/Hacking interfaces/hack_fluids_3.png" id="5_mnje6"]
+[ext_resource type="Texture2D" uid="uid://dkrdgp2lfc6ls" path="res://2d-assets/Hacking interfaces/hack_fluids_4.png" id="6_esnfc"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_mapqb"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_k325g"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1c1y5"]
+bg_color = Color(0.505577, 0.546502, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xdwu3"]
+bg_color = Color(0.556863, 0.227451, 0, 1)
+expand_margin_left = 54.0
+expand_margin_right = 54.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_swxpb"]
+bg_color = Color(0.556863, 0.227451, 0, 1)
+expand_margin_left = 54.0
+expand_margin_right = 54.0
+
+[node name="hack_levels" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ri61o")
+
+[node name="background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -450.0
+offset_top = -450.0
+offset_right = 450.0
+offset_bottom = 450.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_sst4i")
+expand_mode = 5
+
+[node name="levels" type="HBoxContainer" parent="background"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -276.0
+offset_top = -252.0
+offset_right = 276.0
+offset_bottom = 256.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 33
+
+[node name="level1" type="VBoxContainer" parent="background/levels"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 30
+
+[node name="percentage" type="Label" parent="background/levels/level1"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(1, 0.659716, 0.496363, 1)
+theme_override_fonts/font = ExtResource("2_0hmqx")
+theme_override_font_sizes/font_size = 33
+text = "30 %"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="slider" type="VSlider" parent="background/levels/level1"]
+layout_mode = 2
+size_flags_horizontal = 1
+size_flags_vertical = 3
+theme_override_icons/grabber = SubResource("ImageTexture_mapqb")
+theme_override_icons/grabber_highlight = SubResource("ImageTexture_k325g")
+theme_override_styles/slider = SubResource("StyleBoxFlat_1c1y5")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_xdwu3")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_swxpb")
+step = 10.0
+value = 30.0
+
+[node name="texture" type="TextureRect" parent="background/levels/level1/slider"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_re5f5")
+expand_mode = 1
+
+[node name="level2" type="VBoxContainer" parent="background/levels"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 30
+
+[node name="percentage" type="Label" parent="background/levels/level2"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(1, 0.659716, 0.496363, 1)
+theme_override_fonts/font = ExtResource("2_0hmqx")
+theme_override_font_sizes/font_size = 33
+text = "30 %"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="slider" type="VSlider" parent="background/levels/level2"]
+layout_mode = 2
+size_flags_horizontal = 1
+size_flags_vertical = 3
+theme_override_icons/grabber = SubResource("ImageTexture_mapqb")
+theme_override_icons/grabber_highlight = SubResource("ImageTexture_k325g")
+theme_override_styles/slider = SubResource("StyleBoxFlat_1c1y5")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_xdwu3")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_swxpb")
+step = 10.0
+value = 30.0
+
+[node name="texture" type="TextureRect" parent="background/levels/level2/slider"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("4_ntqxp")
+expand_mode = 1
+
+[node name="level3" type="VBoxContainer" parent="background/levels"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 30
+
+[node name="percentage" type="Label" parent="background/levels/level3"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(1, 0.659716, 0.496363, 1)
+theme_override_fonts/font = ExtResource("2_0hmqx")
+theme_override_font_sizes/font_size = 33
+text = "30 %"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="slider" type="VSlider" parent="background/levels/level3"]
+layout_mode = 2
+size_flags_horizontal = 1
+size_flags_vertical = 3
+theme_override_icons/grabber = SubResource("ImageTexture_mapqb")
+theme_override_icons/grabber_highlight = SubResource("ImageTexture_k325g")
+theme_override_styles/slider = SubResource("StyleBoxFlat_1c1y5")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_xdwu3")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_swxpb")
+step = 10.0
+value = 30.0
+
+[node name="texture" type="TextureRect" parent="background/levels/level3/slider"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("5_mnje6")
+expand_mode = 1
+
+[node name="level4" type="VBoxContainer" parent="background/levels"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 30
+
+[node name="percentage" type="Label" parent="background/levels/level4"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(1, 0.659716, 0.496363, 1)
+theme_override_fonts/font = ExtResource("2_0hmqx")
+theme_override_font_sizes/font_size = 33
+text = "30 %"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="slider" type="VSlider" parent="background/levels/level4"]
+layout_mode = 2
+size_flags_horizontal = 1
+size_flags_vertical = 3
+theme_override_icons/grabber = SubResource("ImageTexture_mapqb")
+theme_override_icons/grabber_highlight = SubResource("ImageTexture_k325g")
+theme_override_styles/slider = SubResource("StyleBoxFlat_1c1y5")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_xdwu3")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_swxpb")
+step = 10.0
+value = 30.0
+
+[node name="texture" type="TextureRect" parent="background/levels/level4/slider"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("6_esnfc")
+expand_mode = 1
+
+[connection signal="value_changed" from="background/levels/level1/slider" to="." method="_on_slider_value_changed_1"]
+[connection signal="value_changed" from="background/levels/level2/slider" to="." method="_on_slider_value_changed_2"]
+[connection signal="value_changed" from="background/levels/level3/slider" to="." method="_on_slider_value_changed_3"]
+[connection signal="value_changed" from="background/levels/level4/slider" to="." method="_on_slider_value_changed_4"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bm0ele24dghqj"
+path="res://.godot/imported/surchauffe .mp3-b62e7f7322d9dd674ac6fc619a54fdeb.mp3str"
+
+[deps]
+
+source_file="res://Sounds/bruitages/bruitage armes/futuristes/surchauffe .mp3"
+dest_files=["res://.godot/imported/surchauffe .mp3-b62e7f7322d9dd674ac6fc619a54fdeb.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

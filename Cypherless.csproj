@@ -1,0 +1,18 @@
+<Project Sdk="Godot.NET.Sdk/4.6.1">
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <EnableDynamicLoading>true</EnableDynamicLoading>
+    </PropertyGroup>
+    <ItemGroup>
+      <Folder Include="scenes\Entities\" />
+      <Folder Include="scenes\Maps\" />
+      <Folder Include="scripts\Networking\" />
+      <Folder Include="scripts\Weapons\Guns\Rifles\" />
+      <Folder Include="scripts\Weapons\Guns\Special\" />
+    </ItemGroup>
+    <ItemGroup>
+      <Content Include="scenes\Sound manager.tscn" />
+      <Content Include="scripts\Sound\SoundManager.cs.uid" />
+      <Content Include="scripts\Sound\Tutorial.cs.uid" />
+    </ItemGroup>
+</Project>

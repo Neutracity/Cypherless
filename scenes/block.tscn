@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://1g4wvy2n4k7a"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_h228x"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8yeai"]
+albedo_texture = SubResource("CompressedTexture2D_h228x")
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_cwj4y"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dkod4"]
+albedo_texture = SubResource("CompressedTexture2D_h228x")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_0w3dk"]
+points = PackedVector3Array(-0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5)
+
+[node name="Block" type="MeshInstance3D" unique_id=1780428566]
+transform = Transform3D(0.980478, 0, 0, 0, 0.980478, 0, 0, 0, 0.980478, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_8yeai")
+mesh = SubResource("BoxMesh_cwj4y")
+surface_material_override/0 = SubResource("StandardMaterial3D_dkod4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1043329329]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=291927105]
+shape = SubResource("ConvexPolygonShape3D_0w3dk")

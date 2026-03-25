@@ -1,0 +1,44 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://6bobx7r7ipdf"
+path.s3tc="res://.godot/imported/Arenemultijoueur_Zaku_Bake1_PBR_Metalness-Zaku_Bake1_PBR_Roughness.webp-e90e07eccb7c1f5fcf55b5b844fe9ff0.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "05f700272d44d99f7859f52bf4a617ec"
+}
+
+[deps]
+
+source_file="res://3d-assets/map/MultiJoueur/Arenemultijoueur_Zaku_Bake1_PBR_Metalness-Zaku_Bake1_PBR_Roughness.webp"
+dest_files=["res://.godot/imported/Arenemultijoueur_Zaku_Bake1_PBR_Metalness-Zaku_Bake1_PBR_Roughness.webp-e90e07eccb7c1f5fcf55b5b844fe9ff0.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

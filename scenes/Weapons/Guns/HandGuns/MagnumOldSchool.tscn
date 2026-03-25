@@ -1,0 +1,87 @@
+[gd_scene load_steps=10 format=3 uid="uid://dnvuucv278sn"]
+
+[ext_resource type="Script" uid="uid://bwbb2y1ri87qt" path="res://scripts/Weapons/Guns/HandGuns/HandGun1.cs" id="1_uh3es"]
+[ext_resource type="PackedScene" uid="uid://cjcao7ape1g3f" path="res://3d-assets/Weapons/Guns/HandGuns/Magnum.glb" id="2_xiy6a"]
+[ext_resource type="AudioStream" uid="uid://bdspeoqwbx3be" path="res://Sounds/Pistol_fire_9mm.wav" id="3_xiy6a"]
+
+[sub_resource type="Animation" id="Animation_wb10u"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_jirht"]
+resource_name = "Shoot"
+length = 0.2
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dt3tu"]
+_data = {
+&"RESET": SubResource("Animation_wb10u"),
+&"Shoot": SubResource("Animation_jirht")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bvscw"]
+custom_solver_bias = 1.0
+size = Vector3(1.02905, 4.22632, 6.70795)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_87u2s"]
+albedo_color = Color(0.740782, 0.875309, 0, 1)
+emission_enabled = true
+emission = Color(0.774271, 0.85252, 0, 1)
+emission_energy_multiplier = 3.55
+
+[sub_resource type="BoxMesh" id="BoxMesh_w8u33"]
+material = SubResource("StandardMaterial3D_87u2s")
+size = Vector3(0.09, 0.09, 0.09)
+
+[node name="MagnumOldSchool" type="Node3D"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+script = ExtResource("1_uh3es")
+UseDelay = 0.6
+Damage = 3
+Ammo = 6
+MagazineSize = 6
+MagazineCount = 0
+metadata/test_scene = "res://scenes/Maps/DEBUG_TestScene.tscn"
+
+[node name="UseCooldown" type="Timer" parent="."]
+wait_time = 0.6
+one_shot = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_dt3tu")
+}
+
+[node name="WeaponMeshHolder" type="Node3D" parent="."]
+
+[node name="Magnum2" parent="WeaponMeshHolder" instance=ExtResource("2_xiy6a")]
+transform = Transform3D(1.55995, 0, 0.0398954, 0, 1.56046, 0, -0.0398954, 0, 1.55995, -0.00606004, 0.0338588, -0.10092)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.102679, 0, 2.9731e-10, 0, 0.102679, 0, -2.9731e-10, 0, 0.102679, -0.00645507, -0.0241031, -0.138637)
+shape = SubResource("BoxShape3D_bvscw")
+
+[node name="Muzzles" type="Node3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="Muzzle" type="Marker3D" parent="Muzzles"]
+transform = Transform3D(-1.31134e-09, 0, -0.03, 0, 0.03, 0, 0.03, 0, -1.31134e-09, 0.474868, 0.0923825, -0.0142444)
+
+[node name="ShootParticles" type="CPUParticles3D" parent="Muzzles/Muzzle"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+emitting = false
+amount = 64
+lifetime = 0.4
+one_shot = true
+preprocess = 0.2
+speed_scale = 1.65
+randomness = 0.17
+lifetime_randomness = 0.28
+mesh = SubResource("BoxMesh_w8u33")
+gravity = Vector3(1, 0, 0)
+initial_velocity_min = 60.61
+initial_velocity_max = 111.11
+scale_amount_min = 0.0
+color = Color(0.987573, 0.976317, 0.962664, 1)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.0437899, 0, 0.00845084)
+stream = ExtResource("3_xiy6a")

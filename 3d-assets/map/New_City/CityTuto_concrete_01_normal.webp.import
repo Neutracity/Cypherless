@@ -1,0 +1,44 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://bfdjnma42vr3o"
+path.s3tc="res://.godot/imported/CityTuto_concrete_01_normal.webp-d44e4cab4e28fcaf5d7ddc6ef85dec5b.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "b766c64d27d8d5da9a037c0d1bf1f3ba"
+}
+
+[deps]
+
+source_file="res://3d-assets/map/New_City/CityTuto_concrete_01_normal.webp"
+dest_files=["res://.godot/imported/CityTuto_concrete_01_normal.webp-d44e4cab4e28fcaf5d7ddc6ef85dec5b.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=1
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=1
+roughness/src_normal="res://3d-assets/map/New_City/CityTuto_concrete_01_normal.webp"
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

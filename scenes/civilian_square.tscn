@@ -1,0 +1,361 @@
+[gd_scene format=3 uid="uid://ebfpryhd50qj"]
+
+[ext_resource type="PackedScene" uid="uid://c5fij3ki2uvip" path="res://scenes/Entities/Pnjs/npc.tscn" id="1_51gns"]
+
+[node name="CivilianSquare" type="Node3D" unique_id=537360248]
+
+[node name="Square1" type="Node3D" parent="." unique_id=566184063]
+
+[node name="Marker3D" type="Marker3D" parent="Square1" unique_id=1972150437]
+transform = Transform3D(-0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, -0.258819, -36.0212, 0.852653, -0.247225)
+
+[node name="Marker3D2" type="Marker3D" parent="Square1" unique_id=1004601173]
+transform = Transform3D(-0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, -0.258819, 17.8976, 0.852653, -0.765043)
+
+[node name="Marker3D3" type="Marker3D" parent="Square1" unique_id=716412915]
+transform = Transform3D(-0.258819, 0, -0.965927, 0, 1, 0, 0.965927, 0, -0.258819, 17.8976, 0.852653, 27.4142)
+
+[node name="Marker3D4" type="Marker3D" parent="Square1" unique_id=1791780563]
+transform = Transform3D(-0.258819, 0, -0.965927, 0, 1, 0, 0.965927, 0, -0.258819, -37.8871, 0.852653, 27.4142)
+
+[node name="Square2" type="Node3D" parent="." unique_id=404817994]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8466, -9.53674e-07, 0.830043)
+
+[node name="Marker3D" type="Marker3D" parent="Square2" unique_id=1457619648]
+transform = Transform3D(-0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, -0.258819, -36.0212, 0.852653, -0.247225)
+
+[node name="Marker3D2" type="Marker3D" parent="Square2" unique_id=2066630175]
+transform = Transform3D(-0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, -0.258819, 17.8976, 0.852653, -0.765043)
+
+[node name="Marker3D3" type="Marker3D" parent="Square2" unique_id=1482007880]
+transform = Transform3D(-0.258819, 0, -0.965927, 0, 1, 0, 0.965927, 0, -0.258819, 17.8976, 0.852653, 27.4142)
+
+[node name="Marker3D4" type="Marker3D" parent="Square2" unique_id=958153395]
+transform = Transform3D(-0.258819, 0, -0.965927, 0, 1, 0, 0.965927, 0, -0.258819, -37.8871, 0.852653, 27.4142)
+
+[node name="Square3" type="Node3D" parent="." unique_id=1594177951]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.62818, -9.53674e-07, 0.150373)
+
+[node name="Marker3D" type="Marker3D" parent="Square3" unique_id=557594229]
+transform = Transform3D(-0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, -0.258819, -36.0212, 0.852653, -0.247225)
+
+[node name="Marker3D2" type="Marker3D" parent="Square3" unique_id=1725199840]
+transform = Transform3D(-0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, -0.258819, 17.8976, 0.852653, -0.765043)
+
+[node name="Marker3D3" type="Marker3D" parent="Square3" unique_id=1684985545]
+transform = Transform3D(-0.258819, 0, -0.965927, 0, 1, 0, 0.965927, 0, -0.258819, 17.8976, 0.852653, 27.4142)
+
+[node name="Marker3D4" type="Marker3D" parent="Square3" unique_id=1553071832]
+transform = Transform3D(-0.258819, 0, -0.965927, 0, 1, 0, 0.965927, 0, -0.258819, -37.8871, 0.852653, 27.4142)
+
+[node name="Square4" type="Node3D" parent="." unique_id=1667635310]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0734711, -9.53674e-07, -3.76286)
+
+[node name="Marker3D" type="Marker3D" parent="Square4" unique_id=1176404489]
+transform = Transform3D(-0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, -0.258819, -36.0212, 0.852653, 1.48831)
+
+[node name="Marker3D2" type="Marker3D" parent="Square4" unique_id=947789604]
+transform = Transform3D(-0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, -0.258819, 17.8976, 0.852653, -0.765043)
+
+[node name="Marker3D3" type="Marker3D" parent="Square4" unique_id=1075400233]
+transform = Transform3D(-0.258819, 0, -0.965927, 0, 1, 0, 0.965927, 0, -0.258819, 17.8976, 0.852653, 27.4142)
+
+[node name="Marker3D4" type="Marker3D" parent="Square4" unique_id=743242904]
+transform = Transform3D(-0.258819, 0, -0.965927, 0, 1, 0, 0.965927, 0, -0.258819, -37.8871, 0.852653, 27.4142)
+
+[node name="Square5" type="Node3D" parent="." unique_id=1597157518]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.84692, -9.53674e-07, -2.77608)
+
+[node name="Marker3D" type="Marker3D" parent="Square5" unique_id=460742362]
+transform = Transform3D(-0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, -0.258819, -36.0212, 0.852653, -0.247225)
+
+[node name="Marker3D2" type="Marker3D" parent="Square5" unique_id=562972384]
+transform = Transform3D(-0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, -0.258819, 17.8976, 0.852653, -0.765043)
+
+[node name="Marker3D3" type="Marker3D" parent="Square5" unique_id=600779400]
+transform = Transform3D(-0.258819, 0, -0.965927, 0, 1, 0, 0.965927, 0, -0.258819, 17.8976, 0.852653, 27.4142)
+
+[node name="Marker3D4" type="Marker3D" parent="Square5" unique_id=904510626]
+transform = Transform3D(-0.258819, 0, -0.965927, 0, 1, 0, 0.965927, 0, -0.258819, -35.6945, 0.852653, 27.4142)
+
+[node name="Square6" type="Node3D" parent="." unique_id=804717268]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.16973, -9.53674e-07, -4.7147)
+
+[node name="Marker3D" type="Marker3D" parent="Square6" unique_id=1046420725]
+transform = Transform3D(-0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, -0.258819, -36.0212, 0.852653, -0.247225)
+
+[node name="Marker3D2" type="Marker3D" parent="Square6" unique_id=1455305476]
+transform = Transform3D(-0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, -0.258819, 17.8976, 0.852653, -0.765043)
+
+[node name="Marker3D3" type="Marker3D" parent="Square6" unique_id=745482128]
+transform = Transform3D(-0.258819, 0, -0.965927, 0, 1, 0, 0.965927, 0, -0.258819, 17.8976, 0.852653, 27.4142)
+
+[node name="Marker3D4" type="Marker3D" parent="Square6" unique_id=571915786]
+transform = Transform3D(-0.258819, 0, -0.965927, 0, 1, 0, 0.965927, 0, -0.258819, -37.8871, 0.852653, 27.4142)
+
+[node name="Square7" type="Node3D" parent="." unique_id=580784407]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.749765, -2.86102e-06, -4.68907)
+
+[node name="Marker3D" type="Marker3D" parent="Square7" unique_id=1150295859]
+transform = Transform3D(-0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, -0.258819, -36.0212, 0.852653, -0.247225)
+
+[node name="Marker3D2" type="Marker3D" parent="Square7" unique_id=1873296699]
+transform = Transform3D(-0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, -0.258819, 17.8976, 0.852653, -0.765043)
+
+[node name="Marker3D3" type="Marker3D" parent="Square7" unique_id=65645360]
+transform = Transform3D(-0.258819, 0, -0.965927, 0, 1, 0, 0.965927, 0, -0.258819, 17.8976, 0.852653, 27.4142)
+
+[node name="Marker3D4" type="Marker3D" parent="Square7" unique_id=1894938551]
+transform = Transform3D(-0.258819, 0, -0.965927, 0, 1, 0, 0.965927, 0, -0.258819, -37.8871, 0.852653, 27.4142)
+
+[node name="Square8" type="Node3D" parent="." unique_id=924470781]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.18601, -3.8147e-06, -3.81302)
+
+[node name="Marker3D" type="Marker3D" parent="Square8" unique_id=25481315]
+transform = Transform3D(-0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, -0.258819, -36.0212, 0.852653, 1.04497)
+
+[node name="Marker3D2" type="Marker3D" parent="Square8" unique_id=1789790207]
+transform = Transform3D(-0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, -0.258819, 17.8976, 0.852653, -0.765043)
+
+[node name="Marker3D3" type="Marker3D" parent="Square8" unique_id=1134065827]
+transform = Transform3D(-0.258819, 0, -0.965927, 0, 1, 0, 0.965927, 0, -0.258819, 17.8976, 0.852653, 27.4142)
+
+[node name="Marker3D4" type="Marker3D" parent="Square8" unique_id=1313570896]
+transform = Transform3D(-0.258819, 0, -0.965927, 0, 1, 0, 0.965927, 0, -0.258819, -37.8871, 0.852653, 27.4142)
+
+[node name="Square9" type="Node3D" parent="." unique_id=46861183]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.28767, -4.76837e-06, -3.31976)
+
+[node name="Marker3D" type="Marker3D" parent="Square9" unique_id=1899841426]
+transform = Transform3D(-0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, -0.258819, -36.0212, 0.852653, 1.18614)
+
+[node name="Marker3D2" type="Marker3D" parent="Square9" unique_id=1338123961]
+transform = Transform3D(-0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, -0.258819, 17.8976, 0.852653, -0.765043)
+
+[node name="Marker3D3" type="Marker3D" parent="Square9" unique_id=591724509]
+transform = Transform3D(-0.258819, 0, -0.965927, 0, 1, 0, 0.965927, 0, -0.258819, 17.8976, 0.852653, 27.4142)
+
+[node name="Marker3D4" type="Marker3D" parent="Square9" unique_id=1373479675]
+transform = Transform3D(-0.258819, 0, -0.965927, 0, 1, 0, 0.965927, 0, -0.258819, -37.8871, 0.852653, 27.4142)
+
+[node name="Square10" type="Node3D" parent="." unique_id=818548367]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.78483, -3.8147e-06, 1.08534)
+
+[node name="Marker3D" type="Marker3D" parent="Square10" unique_id=695998395]
+transform = Transform3D(-0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, -0.258819, -36.0212, 0.852653, -0.247225)
+
+[node name="Marker3D2" type="Marker3D" parent="Square10" unique_id=2109454055]
+transform = Transform3D(-0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, -0.258819, 17.8976, 0.852653, -0.765043)
+
+[node name="Marker3D3" type="Marker3D" parent="Square10" unique_id=1087358388]
+transform = Transform3D(-0.258819, 0, -0.965927, 0, 1, 0, 0.965927, 0, -0.258819, 17.8976, 0.852653, 27.4142)
+
+[node name="Marker3D4" type="Marker3D" parent="Square10" unique_id=1896905244]
+transform = Transform3D(-0.258819, 0, -0.965927, 0, 1, 0, 0.965927, 0, -0.258819, -37.8871, 0.852653, 27.4142)
+
+[node name="Square11" type="Node3D" parent="." unique_id=1809643452]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.47801, -3.8147e-06, 1.23944)
+
+[node name="Marker3D" type="Marker3D" parent="Square11" unique_id=1395380596]
+transform = Transform3D(-0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, -0.258819, -36.0212, 0.852653, -0.247225)
+
+[node name="Marker3D2" type="Marker3D" parent="Square11" unique_id=166177927]
+transform = Transform3D(-0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, -0.258819, 17.8976, 0.852653, -0.765043)
+
+[node name="Marker3D3" type="Marker3D" parent="Square11" unique_id=250151025]
+transform = Transform3D(-0.258819, 0, -0.965927, 0, 1, 0, 0.965927, 0, -0.258819, 17.8976, 0.852653, 27.4142)
+
+[node name="Marker3D4" type="Marker3D" parent="Square11" unique_id=75134684]
+transform = Transform3D(-0.258819, 0, -0.965927, 0, 1, 0, 0.965927, 0, -0.258819, -37.8871, 0.852653, 27.4142)
+
+[node name="Square12" type="Node3D" parent="." unique_id=1200090589]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.572312, -1.90735e-06, 3.93338)
+
+[node name="Marker3D" type="Marker3D" parent="Square12" unique_id=497179812]
+transform = Transform3D(-0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, -0.258819, -36.0212, 0.852653, -0.247225)
+
+[node name="Marker3D2" type="Marker3D" parent="Square12" unique_id=1177832226]
+transform = Transform3D(-0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, -0.258819, 17.8976, 0.852653, -0.765043)
+
+[node name="Marker3D3" type="Marker3D" parent="Square12" unique_id=949793958]
+transform = Transform3D(-0.258819, 0, -0.965927, 0, 1, 0, 0.965927, 0, -0.258819, 17.8976, 0.852653, 27.4142)
+
+[node name="Marker3D4" type="Marker3D" parent="Square12" unique_id=1103462586]
+transform = Transform3D(-0.258819, 0, -0.965927, 0, 1, 0, 0.965927, 0, -0.258819, -37.8871, 0.852653, 27.4142)
+
+[node name="Square13" type="Node3D" parent="." unique_id=167632419]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.173604, -1.90735e-06, 1.10754)
+
+[node name="Marker3D" type="Marker3D" parent="Square13" unique_id=976009118]
+transform = Transform3D(-0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, -0.258819, -36.0212, 0.852653, -0.247225)
+
+[node name="Marker3D2" type="Marker3D" parent="Square13" unique_id=1940600332]
+transform = Transform3D(-0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, -0.258819, 17.8976, 0.852653, -0.765043)
+
+[node name="Marker3D3" type="Marker3D" parent="Square13" unique_id=905137219]
+transform = Transform3D(-0.258819, 0, -0.965927, 0, 1, 0, 0.965927, 0, -0.258819, 17.8976, 0.852653, 27.4142)
+
+[node name="Marker3D4" type="Marker3D" parent="Square13" unique_id=1229607299]
+transform = Transform3D(-0.258819, 0, -0.965927, 0, 1, 0, 0.965927, 0, -0.258819, -37.8871, 0.852653, 27.4142)
+
+[node name="First" type="Node3D" parent="." unique_id=784830647]
+
+[node name="NPCSquare2" parent="First" unique_id=1863059459 node_paths=PackedStringArray("MovementPoints") instance=ExtResource("1_51gns")]
+transform = Transform3D(0.00698127, 0, -0.999976, 0, 1, 0, 0.999976, 0, 0.00698127, -22.1452, 0.853552, -0.980886)
+WaitDuration = 0.1
+MovementPoints = [NodePath("../../Square2/Marker3D"), NodePath("../../Square2/Marker3D2"), NodePath("../../Square2/Marker3D3"), NodePath("../../Square2/Marker3D4")]
+_actualMesh = 6
+
+[node name="NPCSquare4" parent="First" unique_id=1263781477 node_paths=PackedStringArray("MovementPoints") instance=ExtResource("1_51gns")]
+transform = Transform3D(0.00698127, 0, -0.999976, 0, 1, 0, 0.999976, 0, 0.00698127, -8.48764, 0.852653, -0.0187845)
+WaitDuration = 0.1
+MovementPoints = [NodePath("../../Square4/Marker3D4"), NodePath("../../Square4/Marker3D3"), NodePath("../../Square4/Marker3D2"), NodePath("../../Square4/Marker3D")]
+_actualMesh = 3
+
+[node name="NPCSquare6" parent="First" unique_id=1612353787 node_paths=PackedStringArray("MovementPoints") instance=ExtResource("1_51gns")]
+transform = Transform3D(0.00698127, 0, -0.999976, 0, 1, 0, 0.999976, 0, 0.00698127, 4.88303, 0.852653, -0.0187845)
+WaitDuration = 0.1
+MovementPoints = [NodePath("../../Square6/Marker3D"), NodePath("../../Square6/Marker3D2"), NodePath("../../Square6/Marker3D3"), NodePath("../../Square6/Marker3D4")]
+_actualMesh = 2
+
+[node name="NPCSquare8" parent="First" unique_id=1322054155 node_paths=PackedStringArray("MovementPoints") instance=ExtResource("1_51gns")]
+transform = Transform3D(0.00698127, 0, -0.999976, 0, 1, 0, 0.999976, 0, 0.00698127, -17.9953, 0.852653, -0.0187845)
+WaitDuration = 0.1
+MovementPoints = [NodePath("../../Square8/Marker3D"), NodePath("../../Square8/Marker3D2"), NodePath("../../Square8/Marker3D3"), NodePath("../../Square8/Marker3D4")]
+_actualMesh = 5
+
+[node name="NPCSquare10" parent="First" unique_id=55983579 node_paths=PackedStringArray("MovementPoints") instance=ExtResource("1_51gns")]
+transform = Transform3D(0.00698127, 0, -0.999976, 0, 1, 0, 0.999976, 0, 0.00698127, -1.37387, 0.852653, 1.89332)
+WaitDuration = 0.1
+MovementPoints = [NodePath("../../Square10/Marker3D"), NodePath("../../Square10/Marker3D2"), NodePath("../../Square10/Marker3D3"), NodePath("../../Square10/Marker3D4")]
+_actualMesh = 2
+
+[node name="NPCSquare12" parent="First" unique_id=1173886549 node_paths=PackedStringArray("MovementPoints") instance=ExtResource("1_51gns")]
+transform = Transform3D(0.00698127, 0, -0.999976, 0, 1, 0, 0.999976, 0, 0.00698127, -12.8872, 0.852653, 1.93879)
+WaitDuration = 0.1
+MovementPoints = [NodePath("../../Square12/Marker3D4"), NodePath("../../Square12/Marker3D3"), NodePath("../../Square12/Marker3D2"), NodePath("../../Square12/Marker3D")]
+_actualMesh = 4
+
+[node name="Second" type="Node3D" parent="." unique_id=575953863]
+
+[node name="NPCSquare2" parent="Second" unique_id=496146452 node_paths=PackedStringArray("MovementPoints") instance=ExtResource("1_51gns")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -39.1809, 0.852653, 19.7433)
+WaitDuration = 0.1
+MovementPoints = [NodePath("../../Square2/Marker3D4"), NodePath("../../Square2/Marker3D"), NodePath("../../Square2/Marker3D2"), NodePath("../../Square2/Marker3D3")]
+_actualMesh = 2
+
+[node name="NPCSquare4" parent="Second" unique_id=228544734 node_paths=PackedStringArray("MovementPoints") instance=ExtResource("1_51gns")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -37.4645, 0.852653, 16.1701)
+WaitDuration = 0.1
+MovementPoints = [NodePath("../../Square4/Marker3D3"), NodePath("../../Square4/Marker3D2"), NodePath("../../Square4/Marker3D"), NodePath("../../Square4/Marker3D4")]
+_actualMesh = 4
+
+[node name="NPCSquare6" parent="Second" unique_id=81670278 node_paths=PackedStringArray("MovementPoints") instance=ExtResource("1_51gns")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -38.2185, 0.852653, 2.19682)
+WaitDuration = 0.1
+MovementPoints = [NodePath("../../Square6/Marker3D4"), NodePath("../../Square6/Marker3D"), NodePath("../../Square6/Marker3D2"), NodePath("../../Square6/Marker3D3")]
+_actualMesh = 2
+
+[node name="NPCSquare8" parent="Second" unique_id=1099717629 node_paths=PackedStringArray("MovementPoints") instance=ExtResource("1_51gns")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -38.2185, 0.852653, 12.6377)
+WaitDuration = 0.1
+MovementPoints = [NodePath("../../Square8/Marker3D4"), NodePath("../../Square8/Marker3D"), NodePath("../../Square8/Marker3D2"), NodePath("../../Square8/Marker3D3")]
+_actualMesh = 3
+
+[node name="NPCSquare10" parent="Second" unique_id=2136130151 node_paths=PackedStringArray("MovementPoints") instance=ExtResource("1_51gns")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -37.1853, 0.852653, 7.00144)
+WaitDuration = 0.1
+MovementPoints = [NodePath("../../Square10/Marker3D3"), NodePath("../../Square10/Marker3D2"), NodePath("../../Square10/Marker3D"), NodePath("../../Square10/Marker3D4")]
+_actualMesh = 9
+
+[node name="NPCSquare12" parent="Second" unique_id=1567194972 node_paths=PackedStringArray("MovementPoints") instance=ExtResource("1_51gns")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -36.2609, 0.852653, 10.16)
+WaitDuration = 0.1
+MovementPoints = [NodePath("../../Square12/Marker3D4"), NodePath("../../Square12/Marker3D"), NodePath("../../Square12/Marker3D2"), NodePath("../../Square12/Marker3D3")]
+_actualMesh = 5
+
+[node name="Third" type="Node3D" parent="." unique_id=1675011061]
+
+[node name="NPCSquare1" parent="Third" unique_id=849874932 node_paths=PackedStringArray("MovementPoints") instance=ExtResource("1_51gns")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -24.3309, 0.852653, 27.9861)
+WaitDuration = 0.1
+MovementPoints = [NodePath("../../Square1/Marker3D3"), NodePath("../../Square1/Marker3D4"), NodePath("../../Square1/Marker3D"), NodePath("../../Square1/Marker3D2")]
+_actualMesh = 5
+
+[node name="NPCSquare3" parent="Third" unique_id=963627148 node_paths=PackedStringArray("MovementPoints") instance=ExtResource("1_51gns")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -16.2725, 0.852653, 27.9399)
+WaitDuration = 0.1
+MovementPoints = [NodePath("../../Square3/Marker3D3"), NodePath("../../Square3/Marker3D4"), NodePath("../../Square3/Marker3D"), NodePath("../../Square3/Marker3D2")]
+
+[node name="NPCSquare5" parent="Third" unique_id=1764894622 node_paths=PackedStringArray("MovementPoints") instance=ExtResource("1_51gns")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.55851, 0.852653, 27.578)
+WaitDuration = 0.1
+MovementPoints = [NodePath("../../Square5/Marker3D3"), NodePath("../../Square5/Marker3D4"), NodePath("../../Square5/Marker3D"), NodePath("../../Square5/Marker3D2")]
+
+[node name="NPCSquare7" parent="Third" unique_id=1276045706 node_paths=PackedStringArray("MovementPoints") instance=ExtResource("1_51gns")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.375021, 0.852653, 27.578)
+WaitDuration = 0.1
+MovementPoints = [NodePath("../../Square7/Marker3D2"), NodePath("../../Square7/Marker3D"), NodePath("../../Square7/Marker3D4"), NodePath("../../Square7/Marker3D3")]
+_actualMesh = 2
+
+[node name="NPCSquare9" parent="Third" unique_id=165239766 node_paths=PackedStringArray("MovementPoints") instance=ExtResource("1_51gns")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -8.24376, 0.852653, 25.9758)
+WaitDuration = 0.1
+MovementPoints = [NodePath("../../Square9/Marker3D3"), NodePath("../../Square9/Marker3D4"), NodePath("../../Square9/Marker3D"), NodePath("../../Square9/Marker3D2")]
+_actualMesh = 5
+
+[node name="NPCSquare11" parent="Third" unique_id=695440307 node_paths=PackedStringArray("MovementPoints") instance=ExtResource("1_51gns")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.66625, 0.852653, 26.045)
+WaitDuration = 0.1
+MovementPoints = [NodePath("../../Square11/Marker3D3"), NodePath("../../Square11/Marker3D4"), NodePath("../../Square11/Marker3D"), NodePath("../../Square11/Marker3D2")]
+_actualMesh = 8
+
+[node name="NPCSquare13" parent="Third" unique_id=754426227 node_paths=PackedStringArray("MovementPoints") instance=ExtResource("1_51gns")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -11.5892, 0.852653, 25.6933)
+WaitDuration = 0.1
+MovementPoints = [NodePath("../../Square13/Marker3D4"), NodePath("../../Square13/Marker3D3"), NodePath("../../Square13/Marker3D2"), NodePath("../../Square13/Marker3D")]
+_actualMesh = 7
+
+[node name="Fourth" type="Node3D" parent="." unique_id=2058054105]
+
+[node name="NPCSquare1" parent="Fourth" unique_id=608907811 node_paths=PackedStringArray("MovementPoints") instance=ExtResource("1_51gns")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 20.3371, 0.852653, 18.9369)
+WaitDuration = 0.1
+MovementPoints = [NodePath("../../Square1/Marker3D"), NodePath("../../Square1/Marker3D4"), NodePath("../../Square1/Marker3D3"), NodePath("../../Square1/Marker3D2")]
+_actualMesh = 4
+
+[node name="NPCSquare3" parent="Fourth" unique_id=1988773113 node_paths=PackedStringArray("MovementPoints") instance=ExtResource("1_51gns")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 18.5804, 0.852653, 14.4513)
+WaitDuration = 0.1
+MovementPoints = [NodePath("../../Square3/Marker3D2"), NodePath("../../Square3/Marker3D3"), NodePath("../../Square3/Marker3D4"), NodePath("../../Square3/Marker3D")]
+_actualMesh = 9
+
+[node name="NPCSquare5" parent="Fourth" unique_id=278304745 node_paths=PackedStringArray("MovementPoints") instance=ExtResource("1_51gns")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 19.8411, 0.852653, 6.10092)
+WaitDuration = 0.1
+MovementPoints = [NodePath("../../Square5/Marker3D2"), NodePath("../../Square5/Marker3D3"), NodePath("../../Square5/Marker3D4"), NodePath("../../Square5/Marker3D")]
+_actualMesh = 4
+
+[node name="NPCSquare7" parent="Fourth" unique_id=32039394 node_paths=PackedStringArray("MovementPoints") instance=ExtResource("1_51gns")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 19.9289, 0.852653, 2.35539)
+WaitDuration = 0.1
+MovementPoints = [NodePath("../../Square7/Marker3D"), NodePath("../../Square7/Marker3D4"), NodePath("../../Square7/Marker3D3"), NodePath("../../Square7/Marker3D2")]
+_actualMesh = 10
+
+[node name="NPCSquare9" parent="Fourth" unique_id=1670450555 node_paths=PackedStringArray("MovementPoints") instance=ExtResource("1_51gns")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 18.3267, 0.852653, 7.69546)
+WaitDuration = 0.1
+MovementPoints = [NodePath("../../Square9/Marker3D2"), NodePath("../../Square9/Marker3D3"), NodePath("../../Square9/Marker3D4"), NodePath("../../Square9/Marker3D")]
+_actualMesh = 3
+
+[node name="NPCSquare11" parent="Fourth" unique_id=621542082 node_paths=PackedStringArray("MovementPoints") instance=ExtResource("1_51gns")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 18.396, 0.852653, 18.4463)
+WaitDuration = 0.1
+MovementPoints = [NodePath("../../Square11/Marker3D2"), NodePath("../../Square11/Marker3D3"), NodePath("../../Square11/Marker3D4"), NodePath("../../Square11/Marker3D")]
+_actualMesh = 5
+
+[node name="NPCSquare13" parent="Fourth" unique_id=545856924 node_paths=PackedStringArray("MovementPoints") instance=ExtResource("1_51gns")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 18.0442, 0.852653, 9.91543)
+WaitDuration = 0.1
+MovementPoints = [NodePath("../../Square13/Marker3D"), NodePath("../../Square13/Marker3D4"), NodePath("../../Square13/Marker3D3"), NodePath("../../Square13/Marker3D2")]
+_actualMesh = 5

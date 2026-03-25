@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://cati231rfy5oq"]
+
+[ext_resource type="PackedScene" uid="uid://dmvj0qlg42tw2" path="res://scenes/cardboard.tscn" id="1_g61ql"]
+
+[node name="stackofcardboard" type="Node3D" unique_id=1751944000]
+
+[node name="Cardboard" parent="." unique_id=912133242 instance=ExtResource("1_g61ql")]
+transform = Transform3D(0.547271, 0, 0.782339, 0, 0.954756, 0, -0.782339, 0, 0.547271, -0.324553, 0.34451, -0.398296)
+
+[node name="Cardboard2" parent="." unique_id=1279854789 instance=ExtResource("1_g61ql")]
+transform = Transform3D(-0.0748927, 0, 0.951814, 0, 0.954756, 0, -0.951814, 0, -0.0748927, 0.765886, 0.34451, -0.735824)
+
+[node name="Cardboard3" parent="." unique_id=1664036526 instance=ExtResource("1_g61ql")]
+transform = Transform3D(-0.0748927, 0, 0.951814, 0, 0.954756, 0, -0.951814, 0, -0.0748927, 0.594767, 0.34451, 0.29178)
+
+[node name="Cardboard6" parent="." unique_id=318537383 instance=ExtResource("1_g61ql")]
+transform = Transform3D(0.506001, 0, 0.809644, 0, 0.954756, 0, -0.809644, 0, 0.506001, -0.521153, 0.34451, 0.64798)
+
+[node name="Cardboard7" parent="." unique_id=1500053261 instance=ExtResource("1_g61ql")]
+transform = Transform3D(0.855911, 0, 0.423054, 0, 0.954756, 0, -0.423054, 0, 0.855911, -0.562974, 1.04773, 0.161688)
+
+[node name="Cardboard4" parent="." unique_id=939605529 instance=ExtResource("1_g61ql")]
+transform = Transform3D(-0.236228, 0, 0.925071, 0, 0.954756, 0, -0.925071, 0, -0.236228, 0.255926, 1.05977, -0.234405)
+
+[node name="Cardboard5" parent="." unique_id=1323616758 instance=ExtResource("1_g61ql")]
+transform = Transform3D(0.341734, 0, 0.891502, 0, 0.954756, 0, -0.891502, 0, 0.341734, 0.255926, 1.84398, -0.234405)
+
+[node name="Cardboard8" parent="." unique_id=376291278 instance=ExtResource("1_g61ql")]
+transform = Transform3D(0.163034, 0, 0.940733, 0, 0.954756, 0, -0.940733, 0, 0.163034, -0.494614, 1.84398, 0.404971)

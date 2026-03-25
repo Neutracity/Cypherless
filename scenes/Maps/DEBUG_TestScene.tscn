@@ -1,0 +1,116 @@
+[gd_scene format=3 uid="uid://it8ovnbbybeq"]
+
+[ext_resource type="Texture2D" uid="uid://bkneap0kbrosw" path="res://3d-assets/map/hdri/kloofendal_48d_partly_cloudy_puresky_2k.exr" id="1_o8w8q"]
+[ext_resource type="PackedScene" uid="uid://dqoh8mj2d6d8m" path="res://3d-assets/map/arcade/arcade.blend" id="2_a5fpn"]
+[ext_resource type="PackedScene" uid="uid://cdnxx8pcqb441" path="res://scenes/player.tscn" id="3_bin8p"]
+[ext_resource type="PackedScene" uid="uid://cati231rfy5oq" path="res://scenes/stackofcardboard.tscn" id="4_klh2r"]
+[ext_resource type="PackedScene" uid="uid://b0ix2dkplrhgh" path="res://scenes/Entities/Ennemies/melee_enemy.tscn" id="5_dajqs"]
+[ext_resource type="PackedScene" uid="uid://hab2dd1boijm" path="res://scenes/Entities/Pnjs/pnj.tscn" id="6_8freh"]
+[ext_resource type="PackedScene" uid="uid://qvupgjm1lt68" path="res://scenes/hackable_object.tscn" id="7_drg6a"]
+[ext_resource type="PackedScene" uid="uid://irvy5vsxrftc" path="res://scenes/Props/WeaponItem.tscn" id="8_qm7wr"]
+[ext_resource type="PackedScene" uid="uid://k70wy2nds1dy" path="res://scenes/Weapons/Guns/HandGuns/MagnumN42.tscn" id="9_uh0t1"]
+[ext_resource type="PackedScene" uid="uid://cpdenvh327edb" path="res://scenes/Weapons/Guns/HandGuns/TheWisperer.tscn" id="10_iqmq3"]
+[ext_resource type="PackedScene" uid="uid://dip3gg5xw38fd" path="res://scenes/Entities/Ennemies/ranged_enemy.tscn" id="11_cacme"]
+[ext_resource type="PackedScene" uid="uid://1oes7d2e5s6j" path="res://scenes/Weapons/Swords/ExoKatana.tscn" id="12_sy63a"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_x3701"]
+panorama = ExtResource("1_o8w8q")
+
+[sub_resource type="Sky" id="Sky_sy63a"]
+sky_material = SubResource("PanoramaSkyMaterial_x3701")
+radiance_size = 0
+
+[sub_resource type="Environment" id="Environment_b11xg"]
+background_mode = 2
+sky = SubResource("Sky_sy63a")
+tonemap_mode = 2
+ssao_enabled = true
+glow_enabled = true
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_honcr"]
+vertices = PackedVector3Array(-28.7983, 0.539529, -1.33849, -28.7983, 0.539529, 1.41151, -25.7983, 0.539529, 1.41151, -25.7983, 0.539529, -1.33849, -24.0483, -2.46047, -1.33849, -24.0483, -2.46047, 1.41151, -3.79829, -2.46047, 1.41151, -3.79829, -2.46047, -1.33849, -23.2983, 3.53953, -1.33849, -23.2983, 3.53953, 1.41151, -12.2983, 3.53953, 1.41151, -12.2983, 3.53953, -1.33849, -16.0483, 0.789529, -1.33849, -16.0483, 0.789529, 1.41151, -8.04829, 0.789529, 1.41151, -8.04829, 0.789529, -1.33849, -13.5483, 6.53953, -1.33849, -13.5483, 6.53953, 1.41151, -10.5483, 6.53953, 1.41151, -10.5483, 6.53953, -1.33849, -5.54829, 4.03953, -1.33849, -5.54829, 4.03953, 1.41151, -2.29829, 4.03953, 1.41151, -2.29829, 4.03953, -1.33849, -2.79829, 0.0395288, -1.33849, -2.79829, 0.0395288, 1.41151, 0.45171, 0.0395288, 1.41151, 0.45171, 0.0395288, -1.33849, 1.45171, -2.46047, -1.33849, 1.45171, -2.46047, 1.41151, 20.4517, -2.46047, 1.41151, 20.4517, -2.46047, -1.33849, 1.70171, 6.28953, -1.33849, 1.70171, 6.28953, 1.41151, 7.20171, 6.28953, 1.41151, 7.20171, 6.28953, -1.33849, 4.70171, 0.539529, -1.33849, 4.70171, 0.539529, 1.41151, 17.4517, 0.539529, 1.41151, 17.4517, 0.539529, -1.33849, 9.20171, 3.78953, -1.33849, 9.20171, 3.78953, 1.41151, 12.4517, 3.78953, 1.41151, 12.4517, 3.78953, -1.33849, 21.4517, -0.710471, -1.33849, 21.4517, -0.710471, 1.41151, 24.4517, -0.710471, 1.41151, 24.4517, -0.710471, -1.33849, -2.54829, -2.46047, -1.08849, -2.54829, -2.46047, 1.16151, 0.20171, -2.46047, 1.16151, 0.20171, -2.46047, -1.08849)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1), PackedInt32Array(7, 6, 4), PackedInt32Array(4, 6, 5), PackedInt32Array(11, 10, 8), PackedInt32Array(8, 10, 9), PackedInt32Array(15, 14, 12), PackedInt32Array(12, 14, 13), PackedInt32Array(19, 18, 16), PackedInt32Array(16, 18, 17), PackedInt32Array(23, 22, 20), PackedInt32Array(20, 22, 21), PackedInt32Array(27, 26, 24), PackedInt32Array(24, 26, 25), PackedInt32Array(31, 30, 28), PackedInt32Array(28, 30, 29), PackedInt32Array(35, 34, 32), PackedInt32Array(32, 34, 33), PackedInt32Array(39, 38, 36), PackedInt32Array(36, 38, 37), PackedInt32Array(43, 42, 40), PackedInt32Array(40, 42, 41), PackedInt32Array(47, 46, 44), PackedInt32Array(44, 46, 45), PackedInt32Array(51, 50, 48), PackedInt32Array(48, 50, 49)]
+
+[sub_resource type="Curve3D" id="Curve3D_7sff5"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, -1.105, 8.27, -0.13, 0.919, -3.841, 0.749, -0.265, 0, 0, 0, 0, 0, -2.223, -1.098, 0.545),
+"tilts": PackedFloat32Array(0, 1.25)
+}
+point_count = 2
+
+[node name="Node3D" type="Node3D" unique_id=1584643118]
+metadata/test_scene = "res://scenes/Maps/DEBUG_TestScene.tscn"
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=200663572]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=137571237]
+environment = SubResource("Environment_b11xg")
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=879899406]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3887, 0)
+navigation_mesh = SubResource("NavigationMesh_honcr")
+
+[node name="arcade" parent="NavigationRegion3D" unique_id=290052244 instance=ExtResource("2_a5fpn")]
+
+[node name="NavigationLink3D" type="NavigationLink3D" parent="NavigationRegion3D" unique_id=1147172524]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.98324, 1.1352, -0.48323)
+start_position = Vector3(0.919092, -3.84054, 0.749285)
+end_position = Vector3(-2.22261, -1.09781, 0.544699)
+
+[node name="Path3D" type="Path3D" parent="NavigationRegion3D/NavigationLink3D" unique_id=120510835]
+curve = SubResource("Curve3D_7sff5")
+
+[node name="stackofcardboard" parent="." unique_id=1035219663 instance=ExtResource("4_klh2r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.88931, -1.03651, 0.367133)
+
+[node name="stackofcardboard2" parent="." unique_id=1131942353 instance=ExtResource("4_klh2r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.33331, -1.34632, -0.100449)
+
+[node name="stackofcardboard3" parent="." unique_id=888607813 instance=ExtResource("4_klh2r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.2987, 1.82458, 0.0681271)
+
+[node name="stackofcardboard4" parent="." unique_id=1794401885 instance=ExtResource("4_klh2r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.72395, 4.51633, 0.254958)
+
+[node name="stackofcardboard5" parent="." unique_id=1712793938 instance=ExtResource("4_klh2r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.5431, -4.14493, -0.226798)
+
+[node name="MeleeEnemy" parent="." unique_id=1536263038 instance=ExtResource("5_dajqs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, -3, 0)
+
+[node name="PNJ" parent="." unique_id=1126977110 instance=ExtResource("6_8freh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.4421, -3.14493, -1.14236)
+PnjId = 1
+
+[node name="PiratableObject" parent="." unique_id=536100729 instance=ExtResource("7_drg6a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -4, 0)
+_hacksType = 1
+
+[node name="HackableObject" parent="." unique_id=1341518243 instance=ExtResource("7_drg6a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.3076, 1.82458, 0.0718616)
+_hacksType = 2
+
+[node name="HackableObject2" parent="." unique_id=2023474652 instance=ExtResource("7_drg6a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.1506, 4.71599, -0.189823)
+
+[node name="WeaponItem" parent="." unique_id=40837802 instance=ExtResource("8_qm7wr")]
+transform = Transform3D(1.02298, 0, 0, 0, 1.02298, 0, 0, 0, 1.02298, -4.27951, 2.61114, -0.148361)
+
+[node name="WeaponItem2" parent="." unique_id=2069005380 instance=ExtResource("8_qm7wr")]
+transform = Transform3D(1.02298, 0, 0, 0, 1.02298, 0, 0, 0, 1.02298, 2, 5, 0)
+WeaponScene = ExtResource("9_uh0t1")
+
+[node name="WeaponItem3" parent="." unique_id=761429762 instance=ExtResource("8_qm7wr")]
+transform = Transform3D(1.02298, 0, 0, 0, 1.02298, 0, 0, 0, 1.02298, 12.0679, 2.56718, -0.0370808)
+WeaponScene = ExtResource("10_iqmq3")
+
+[node name="RangedEnemy" parent="." unique_id=539115322 instance=ExtResource("11_cacme")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.6994, -0.344326, 0.470784)
+
+[node name="Player" parent="." unique_id=491773110 instance=ExtResource("3_bin8p")]
+
+[node name="WeaponItem4" parent="." unique_id=202551545 instance=ExtResource("8_qm7wr")]
+transform = Transform3D(1.02298, 0, 0, 0, 1.02298, 0, 0, 0, 1.02298, 10.8292, 2.21166, -0.403474)
+WeaponScene = ExtResource("12_sy63a")

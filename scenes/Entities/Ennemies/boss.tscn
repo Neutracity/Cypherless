@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://c631i22by0ejt"]
+
+[ext_resource type="Script" uid="uid://b4eb4csu3eki0" path="res://scripts/Entities/enemies/Boss.cs" id="1_6gk8d"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xseq4"]
+radius = 1.0
+height = 4.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kk6rb"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_bg3pb"]
+radius = 1.0
+height = 4.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_2aekm"]
+radius = 10.0
+
+[node name="Boss" type="CharacterBody3D" unique_id=2137077036 groups=["Enemy"]]
+script = ExtResource("1_6gk8d")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=594297655]
+shape = SubResource("CapsuleShape3D_xseq4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=26485227]
+material_override = SubResource("StandardMaterial3D_kk6rb")
+mesh = SubResource("CapsuleMesh_bg3pb")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1057638927]
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1093696170]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=2108317841]
+shape = SubResource("SphereShape3D_2aekm")
+
+[node name="Marker3D" type="Marker3D" parent="." unique_id=937536306]
+
+[node name="Timer" type="Timer" parent="." unique_id=588662217]

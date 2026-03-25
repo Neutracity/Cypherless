@@ -1,0 +1,95 @@
+[gd_scene load_steps=10 format=3 uid="uid://dgjawo6iwwprw"]
+
+[ext_resource type="Script" uid="uid://jsxsky4adf18" path="res://scripts/Weapons/Guns/Bullet.cs" id="1_yuvhm"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ew220"]
+size = Vector3(1, 0.303589, 1.01471)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_euuqi"]
+albedo_color = Color(0.723364, 0.511184, 0.161784, 1)
+emission_enabled = true
+emission = Color(0.945489, 0.37712, 5.77569e-07, 1)
+emission_energy_multiplier = 13.13
+
+[sub_resource type="BoxMesh" id="BoxMesh_qjbis"]
+material = SubResource("StandardMaterial3D_euuqi")
+size = Vector3(0.085, 0.085, 0.33)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yyn2w"]
+custom_solver_bias = 1.0
+margin = 0.34
+size = Vector3(0.8, 0.3, 0.56)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ew220"]
+albedo_color = Color(1, 1, 0, 1)
+emission_enabled = true
+emission = Color(1, 1, 0, 1)
+emission_energy_multiplier = 4.58
+
+[sub_resource type="BoxMesh" id="BoxMesh_t0r4r"]
+material = SubResource("StandardMaterial3D_ew220")
+size = Vector3(0.1, 0.1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t0r4r"]
+albedo_color = Color(1, 0, 0, 1)
+clearcoat_enabled = true
+clearcoat_roughness = 0.15
+
+[sub_resource type="SphereMesh" id="SphereMesh_bq7q4"]
+material = SubResource("StandardMaterial3D_t0r4r")
+radius = 0.05
+height = 0.1
+radial_segments = 16
+rings = 16
+
+[node name="Bullet" type="RigidBody3D"]
+collision_layer = 8
+collision_mask = 137
+collision_priority = 10.0
+script = ExtResource("1_yuvhm")
+metadata/test_scene = "res://scenes/Maps/DEBUG_TestScene.tscn"
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_layer = 10
+collision_mask = 135
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0240203, 0.0138735, -0.240437)
+shape = SubResource("BoxShape3D_ew220")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_qjbis")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0240203, -0.00767186, 0.0167961)
+shape = SubResource("BoxShape3D_yyn2w")
+
+[node name="BounceParticles" type="CPUParticles3D" parent="."]
+transform = Transform3D(3.0598e-07, 0, -1, 0, 1, 0, 1, 0, 3.0598e-07, 0, 0, -0.167845)
+emitting = false
+amount = 64
+one_shot = true
+explosiveness = 1.0
+lifetime_randomness = 1.0
+mesh = SubResource("BoxMesh_t0r4r")
+gravity = Vector3(0, -1, 0)
+initial_velocity_max = 5.15
+scale_amount_min = 0.0
+color = Color(0.988235, 0.976471, 1, 1)
+
+[node name="BloodParticles" type="CPUParticles3D" parent="."]
+transform = Transform3D(3.0598e-07, 0, -1, 0, 1, 0, 1, 0, 3.0598e-07, 0, 0, -0.167845)
+emitting = false
+amount = 128
+one_shot = true
+explosiveness = 1.0
+lifetime_randomness = 1.0
+mesh = SubResource("SphereMesh_bq7q4")
+gravity = Vector3(0, -1, 0)
+initial_velocity_max = 5.15
+scale_amount_min = 0.0
+color = Color(0.988235, 0.976471, 1, 1)
+
+[connection signal="body_entered" from="." to="." method="OnBodyEntered"]
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

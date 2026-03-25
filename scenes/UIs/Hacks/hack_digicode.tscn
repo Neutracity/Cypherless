@@ -1,0 +1,541 @@
+[gd_scene load_steps=19 format=3 uid="uid://b1fxir8jlxy4g"]
+
+[ext_resource type="Script" path="res://scripts/hacks/HackDigicode.cs" id="1_e4rjb"]
+[ext_resource type="Texture2D" uid="uid://bwd651sg0yfdc" path="res://2d-assets/Hacking interfaces/hack_bg.jpg" id="2_4nr8p"]
+[ext_resource type="Texture2D" uid="uid://bpwdpjsepbvk5" path="res://2d-assets/Hacking interfaces/hack_digicode_normal.png" id="2_06tep"]
+[ext_resource type="Texture2D" uid="uid://cqe8j4eg48tti" path="res://2d-assets/Hacking interfaces/hack_digicode_hover.png" id="3_dqd4u"]
+[ext_resource type="Texture2D" uid="uid://brggvq5jsiolb" path="res://2d-assets/Hacking interfaces/hack_digicode_pressed.png" id="3_mbdwc"]
+[ext_resource type="Texture2D" uid="uid://c0txmo5n3y4te" path="res://2d-assets/Hacking interfaces/hack_digicode_1.png" id="4_41saf"]
+[ext_resource type="Texture2D" uid="uid://bhdgtghkcmlbi" path="res://2d-assets/Hacking interfaces/hack_digicode_2.png" id="5_hoc16"]
+[ext_resource type="Texture2D" uid="uid://n8h5acjrm0hm" path="res://2d-assets/Hacking interfaces/hack_digicode_wrong.png" id="6_2lwu5"]
+[ext_resource type="Texture2D" uid="uid://dx2akjma7t7l6" path="res://2d-assets/Hacking interfaces/hack_digicode_3.png" id="6_n5qju"]
+[ext_resource type="Texture2D" uid="uid://bq5aqusr0mxqt" path="res://2d-assets/Hacking interfaces/hack_digicode_4.png" id="8_rv8n5"]
+[ext_resource type="Texture2D" uid="uid://chccefh6hmugm" path="res://2d-assets/Hacking interfaces/hack_digicode_5.png" id="9_84mlr"]
+[ext_resource type="Texture2D" uid="uid://dsoywun0ur2mc" path="res://2d-assets/Hacking interfaces/hack_digicode_6.png" id="10_62yxd"]
+[ext_resource type="Texture2D" uid="uid://b1sx3n1y88pd1" path="res://2d-assets/Hacking interfaces/hack_digicode_7.png" id="11_tlplo"]
+[ext_resource type="Texture2D" uid="uid://d07ldfabqo82n" path="res://2d-assets/Hacking interfaces/hack_digicode_8.png" id="12_4731f"]
+[ext_resource type="Texture2D" uid="uid://cgqhb6tl6o7jm" path="res://2d-assets/Hacking interfaces/hack_digicode_9.png" id="13_7f65v"]
+[ext_resource type="Texture2D" uid="uid://ckyudod3y8e0w" path="res://2d-assets/Hacking interfaces/hack_digicode_A.png" id="14_pibg6"]
+[ext_resource type="Texture2D" uid="uid://5nogf06dkgtd" path="res://2d-assets/Hacking interfaces/hack_digicode_0.png" id="15_a1tl0"]
+[ext_resource type="Texture2D" uid="uid://dyqjcegdvkv5q" path="res://2d-assets/Hacking interfaces/hack_digicode_B.png" id="16_igllh"]
+
+[node name="hack_digicode" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_e4rjb")
+
+[node name="background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -450.0
+offset_top = -450.0
+offset_right = 450.0
+offset_bottom = 450.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_4nr8p")
+expand_mode = 5
+
+[node name="GridContainer" type="GridContainer" parent="background"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -288.0
+offset_right = 298.0
+offset_bottom = 322.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 3
+
+[node name="button1" type="TextureButton" parent="background/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("2_06tep")
+texture_pressed = ExtResource("3_mbdwc")
+texture_hover = ExtResource("3_dqd4u")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="texture_wrong" type="TextureRect" parent="background/GridContainer/button1"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+mouse_filter = 2
+texture = ExtResource("6_2lwu5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="texture" type="TextureRect" parent="background/GridContainer/button1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+mouse_filter = 2
+texture = ExtResource("4_41saf")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="button2" type="TextureButton" parent="background/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("2_06tep")
+texture_pressed = ExtResource("3_mbdwc")
+texture_hover = ExtResource("3_dqd4u")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="texture_wrong" type="TextureRect" parent="background/GridContainer/button2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+mouse_filter = 2
+texture = ExtResource("6_2lwu5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="texture" type="TextureRect" parent="background/GridContainer/button2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+mouse_filter = 2
+texture = ExtResource("5_hoc16")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="button3" type="TextureButton" parent="background/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("2_06tep")
+texture_pressed = ExtResource("3_mbdwc")
+texture_hover = ExtResource("3_dqd4u")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="texture_wrong" type="TextureRect" parent="background/GridContainer/button3"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+mouse_filter = 2
+texture = ExtResource("6_2lwu5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="texture" type="TextureRect" parent="background/GridContainer/button3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+mouse_filter = 2
+texture = ExtResource("6_n5qju")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="button4" type="TextureButton" parent="background/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("2_06tep")
+texture_pressed = ExtResource("3_mbdwc")
+texture_hover = ExtResource("3_dqd4u")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="texture_wrong" type="TextureRect" parent="background/GridContainer/button4"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+mouse_filter = 2
+texture = ExtResource("6_2lwu5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="texture" type="TextureRect" parent="background/GridContainer/button4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+mouse_filter = 2
+texture = ExtResource("8_rv8n5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="button5" type="TextureButton" parent="background/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("2_06tep")
+texture_pressed = ExtResource("3_mbdwc")
+texture_hover = ExtResource("3_dqd4u")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="texture_wrong" type="TextureRect" parent="background/GridContainer/button5"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+mouse_filter = 2
+texture = ExtResource("6_2lwu5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="texture" type="TextureRect" parent="background/GridContainer/button5"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+mouse_filter = 2
+texture = ExtResource("9_84mlr")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="button6" type="TextureButton" parent="background/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("2_06tep")
+texture_pressed = ExtResource("3_mbdwc")
+texture_hover = ExtResource("3_dqd4u")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="texture_wrong" type="TextureRect" parent="background/GridContainer/button6"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+mouse_filter = 2
+texture = ExtResource("6_2lwu5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="texture" type="TextureRect" parent="background/GridContainer/button6"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+mouse_filter = 2
+texture = ExtResource("10_62yxd")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="button7" type="TextureButton" parent="background/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("2_06tep")
+texture_pressed = ExtResource("3_mbdwc")
+texture_hover = ExtResource("3_dqd4u")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="texture_wrong" type="TextureRect" parent="background/GridContainer/button7"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+mouse_filter = 2
+texture = ExtResource("6_2lwu5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="texture" type="TextureRect" parent="background/GridContainer/button7"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+mouse_filter = 2
+texture = ExtResource("11_tlplo")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="button8" type="TextureButton" parent="background/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("2_06tep")
+texture_pressed = ExtResource("3_mbdwc")
+texture_hover = ExtResource("3_dqd4u")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="texture_wrong" type="TextureRect" parent="background/GridContainer/button8"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+mouse_filter = 2
+texture = ExtResource("6_2lwu5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="texture" type="TextureRect" parent="background/GridContainer/button8"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+mouse_filter = 2
+texture = ExtResource("12_4731f")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="button9" type="TextureButton" parent="background/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("2_06tep")
+texture_pressed = ExtResource("3_mbdwc")
+texture_hover = ExtResource("3_dqd4u")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="texture_wrong" type="TextureRect" parent="background/GridContainer/button9"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+mouse_filter = 2
+texture = ExtResource("6_2lwu5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="texture" type="TextureRect" parent="background/GridContainer/button9"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+mouse_filter = 2
+texture = ExtResource("13_7f65v")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="buttonA" type="TextureButton" parent="background/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("2_06tep")
+texture_pressed = ExtResource("3_mbdwc")
+texture_hover = ExtResource("3_dqd4u")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="texture_wrong" type="TextureRect" parent="background/GridContainer/buttonA"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+mouse_filter = 2
+texture = ExtResource("6_2lwu5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="texture" type="TextureRect" parent="background/GridContainer/buttonA"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+mouse_filter = 2
+texture = ExtResource("14_pibg6")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="button0" type="TextureButton" parent="background/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("2_06tep")
+texture_pressed = ExtResource("3_mbdwc")
+texture_hover = ExtResource("3_dqd4u")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="texture_wrong" type="TextureRect" parent="background/GridContainer/button0"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+mouse_filter = 2
+texture = ExtResource("6_2lwu5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="texture" type="TextureRect" parent="background/GridContainer/button0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+mouse_filter = 2
+texture = ExtResource("15_a1tl0")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="buttonB" type="TextureButton" parent="background/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("2_06tep")
+texture_pressed = ExtResource("3_mbdwc")
+texture_hover = ExtResource("3_dqd4u")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="texture_wrong" type="TextureRect" parent="background/GridContainer/buttonB"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+mouse_filter = 2
+texture = ExtResource("6_2lwu5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="texture" type="TextureRect" parent="background/GridContainer/buttonB"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+mouse_filter = 2
+texture = ExtResource("16_igllh")
+expand_mode = 1
+stretch_mode = 5
+
+[connection signal="pressed" from="background/GridContainer/button1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="background/GridContainer/button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="background/GridContainer/button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="background/GridContainer/button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="background/GridContainer/button5" to="." method="_on_button_5_pressed"]
+[connection signal="pressed" from="background/GridContainer/button6" to="." method="_on_button_6_pressed"]
+[connection signal="pressed" from="background/GridContainer/button7" to="." method="_on_button_7_pressed"]
+[connection signal="pressed" from="background/GridContainer/button8" to="." method="_on_button_8_pressed"]
+[connection signal="pressed" from="background/GridContainer/button9" to="." method="_on_button_9_pressed"]
+[connection signal="pressed" from="background/GridContainer/buttonA" to="." method="_on_button_a_pressed"]
+[connection signal="pressed" from="background/GridContainer/button0" to="." method="_on_button_0_pressed"]
+[connection signal="pressed" from="background/GridContainer/buttonB" to="." method="_on_button_b_pressed"]

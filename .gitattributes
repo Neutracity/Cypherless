@@ -1,0 +1,8 @@
+3d-assets/Entities/Enemies/Soldat_militaire.glb filter=lfs diff=lfs merge=lfs -text
+3d-assets/map/hdri/kloofendal_48d_partly_cloudy_puresky_2k.exr filter=lfs diff=lfs merge=lfs -text
+3d-assets/map/MultiJoueur/Arenemultijoueur.glb filter=lfs diff=lfs merge=lfs -text
+3d-assets/map/New_City/CityTuto.glb filter=lfs diff=lfs merge=lfs -text
+3d-assets/map/New_City/MetroTuto.glb filter=lfs diff=lfs merge=lfs -text
+3d-assets/Weapons/Guns/HandGuns/Pistolet_futuriste.glb filter=lfs diff=lfs merge=lfs -text
+3d-assets/Weapons/Guns/HandGuns/Pistolet_silencieux.glb filter=lfs diff=lfs merge=lfs -text
+scenes/Maps/new_city.tscn filter=lfs diff=lfs merge=lfs -text

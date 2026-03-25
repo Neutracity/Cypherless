@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c8jir8dp8pfet"
+path="res://.godot/imported/shotgun fire.mp3-788757c461e49f64d135a34c8d323379.mp3str"
+
+[deps]
+
+source_file="res://Sounds/bruitages/bruitage armes/shotgun/shotgun fire.mp3"
+dest_files=["res://.godot/imported/shotgun fire.mp3-788757c461e49f64d135a34c8d323379.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cg08cnbgjn7pl"]
+
+[ext_resource type="Script" uid="uid://fmdjg764gvt3" path="res://scripts/Game.cs" id="1_blh82"]
+[ext_resource type="PackedScene" uid="uid://ba8be67ef4fwu" path="res://scenes/UIs/Menus/main_menu.tscn" id="3_nyogp"]
+
+[node name="Game" type="Node3D" unique_id=1712745264]
+transform = Transform3D(0.954756, 0, 0, 0, 0.954756, 0, 0, 0, 0.954756, 0, 0, 0)
+script = ExtResource("1_blh82")
+
+[node name="main_menu" parent="." unique_id=609463195 instance=ExtResource("3_nyogp")]

@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://irvy5vsxrftc"]
+
+[ext_resource type="Script" uid="uid://b8lan1awrwyn" path="res://scripts/Weapons/WeaponItem.cs" id="1_33rfo"]
+[ext_resource type="PackedScene" uid="uid://dnvuucv278sn" path="res://scenes/Weapons/Guns/HandGuns/MagnumOldSchool.tscn" id="2_wqpkq"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bvscw"]
+size = Vector3(1.02905, 4.22632, 6.70795)
+
+[node name="WeaponItem" type="RigidBody3D"]
+transform = Transform3D(1.02298, 0, 0, 0, 1.02298, 0, 0, 0, 1.02298, 0, 0, 0)
+collision_layer = 24
+collision_mask = 9
+contact_monitor = true
+max_contacts_reported = 4
+script = ExtResource("1_33rfo")
+WeaponScene = ExtResource("2_wqpkq")
+
+[node name="PickupCooldown" type="Timer" parent="."]
+one_shot = true
+
+[node name="MeshHolder" type="Node3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(-4.19095e-09, 0, -0.102679, 0, 0.102679, 0, 0.102679, 0, -4.19095e-09, 0.138637, -0.0241031, -0.00645506)
+shape = SubResource("BoxShape3D_bvscw")
+
+[connection signal="body_entered" from="." to="." method="OnBodyEntered"]

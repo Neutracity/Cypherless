@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://bt2gagb0oaooo"]
+
+[ext_resource type="Script" uid="uid://bs6f8ggfr4to" path="res://scripts/SplitScreen.cs" id="1_p3xph"]
+[ext_resource type="PackedScene" uid="uid://cdnxx8pcqb441" path="res://scenes/player.tscn" id="2_alm1r"]
+[ext_resource type="PackedScene" uid="uid://bhje8vdrmo7j6" path="res://scenes/Maps/arcade.tscn" id="3_5gpts"]
+
+[node name="SplitScreen" type="Node"]
+script = ExtResource("1_p3xph")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="SubViewport" type="SubViewport" parent="HBoxContainer/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(960, 1080)
+render_target_update_mode = 4
+
+[node name="Player" parent="HBoxContainer/SubViewportContainer/SubViewport" instance=ExtResource("2_alm1r")]
+
+[node name="SubViewportContainer2" type="SubViewportContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="SubViewport" type="SubViewport" parent="HBoxContainer/SubViewportContainer2"]
+handle_input_locally = false
+size = Vector2i(960, 1080)
+render_target_update_mode = 4
+
+[node name="Player" parent="HBoxContainer/SubViewportContainer2/SubViewport" instance=ExtResource("2_alm1r")]
+PlayerIndex = 1
+
+[node name="ArcadeSplit" parent="." instance=ExtResource("3_5gpts")]

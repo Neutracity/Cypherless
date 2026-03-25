@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://df63bwiveiqks"]
+
+[ext_resource type="Script" uid="uid://db81digcju8wk" path="res://scripts/Entities/enemies/Outdated_RangedEnemy.cs" id="1_aiqwc"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7vrwu"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q8j5f"]
+albedo_color = Color(0, 0, 1, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_uv3eh"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_50y4m"]
+radius = 10.0
+
+[node name="RangedEnemy" type="CharacterBody3D" unique_id=1022243228 groups=["Enemy"]]
+script = ExtResource("1_aiqwc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=218665689]
+shape = SubResource("CapsuleShape3D_7vrwu")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=937066557]
+material_override = SubResource("StandardMaterial3D_q8j5f")
+mesh = SubResource("CapsuleMesh_uv3eh")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1350827339]
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1754836788]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1125763339]
+shape = SubResource("SphereShape3D_50y4m")
+
+[node name="Marker3D" type="Marker3D" parent="." unique_id=1283007440]
+
+[node name="Timer" type="Timer" parent="." unique_id=2108679467]

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://0e3v2mxdhf6m"
+path="res://.godot/imported/shotgun reload.wav-e5fd3b1676109dbbe74027b084e288db.sample"
+
+[deps]
+
+source_file="res://Sounds/bruitages/bruitage armes/shotgun/shotgun reload.wav"
+dest_files=["res://.godot/imported/shotgun reload.wav-e5fd3b1676109dbbe74027b084e288db.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

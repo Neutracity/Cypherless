@@ -1,0 +1,104 @@
+[gd_scene load_steps=10 format=3 uid="uid://k70wy2nds1dy"]
+
+[ext_resource type="Script" uid="uid://bwbb2y1ri87qt" path="res://scripts/Weapons/Guns/HandGuns/HandGun1.cs" id="1_clcoj"]
+[ext_resource type="PackedScene" uid="uid://ec3rp2hhello" path="res://3d-assets/Weapons/Guns/HandGuns/Magnum_futuriste.glb" id="2_52ra7"]
+[ext_resource type="AudioStream" uid="uid://bdspeoqwbx3be" path="res://Sounds/Pistol_fire_9mm.wav" id="3_52ra7"]
+
+[sub_resource type="Animation" id="Animation_wb10u"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_jirht"]
+resource_name = "Shoot"
+length = 0.2
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dt3tu"]
+_data = {
+&"RESET": SubResource("Animation_wb10u"),
+&"Shoot": SubResource("Animation_jirht")
+}
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6t11l"]
+albedo_color = Color(0.740782, 0.875309, 0, 1)
+emission_enabled = true
+emission = Color(0.774271, 0.85252, 0, 1)
+emission_energy_multiplier = 3.55
+
+[sub_resource type="BoxMesh" id="BoxMesh_3u3ey"]
+material = SubResource("StandardMaterial3D_6t11l")
+size = Vector3(0.09, 0.09, 0.09)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qr6iw"]
+custom_solver_bias = 1.0
+size = Vector3(0.0681, 0.115051, 0.464111)
+
+[node name="J42" type="Node3D"]
+transform = Transform3D(-7.98128e-08, 0, -1.8259, 0, 1.8259, 0, 1.8259, 0, -7.98128e-08, 0, 0, 0)
+script = ExtResource("1_clcoj")
+UseDelay = 1.0
+MagazineSize = 2
+ReloadDelay = 0.8
+metadata/test_scene = "res://scenes/Maps/DEBUG_TestScene.tscn"
+
+[node name="UseCooldown" type="Timer" parent="."]
+one_shot = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_dt3tu")
+}
+
+[node name="Muzzles" type="Node3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="Muzzle" type="Marker3D" parent="Muzzles"]
+transform = Transform3D(-6.74321e-05, 0.000249641, -0.0299989, 9.80614e-05, 0.0299988, 0.00024942, 0.0299998, -9.74974e-05, -6.8245e-05, 0.411823, 0.0466025, 7.72257e-09)
+
+[node name="ShootParticles" type="CPUParticles3D" parent="Muzzles/Muzzle"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+emitting = false
+amount = 64
+lifetime = 0.4
+one_shot = true
+preprocess = 0.2
+speed_scale = 1.65
+randomness = 0.17
+lifetime_randomness = 0.28
+mesh = SubResource("BoxMesh_3u3ey")
+gravity = Vector3(1, 0, 0)
+initial_velocity_min = 60.61
+initial_velocity_max = 111.11
+scale_amount_min = 0.0
+color = Color(0.987573, 0.976317, 0.962664, 1)
+
+[node name="Muzzle2" type="Marker3D" parent="Muzzles"]
+transform = Transform3D(-1.27171e-09, -0.00732013, -0.0290932, -3.19973e-10, 0.0290932, -0.00732013, 0.03, 1.06135e-16, -1.31134e-09, 0.411823, 0.0820842, 7.72257e-09)
+
+[node name="ShootParticles" type="CPUParticles3D" parent="Muzzles/Muzzle2"]
+transform = Transform3D(-4.80826e-08, 0, 1.1, 0, 1.1, 0, -1.1, 0, -4.80825e-08, 0, 0, 0)
+emitting = false
+amount = 64
+lifetime = 0.4
+one_shot = true
+preprocess = 0.2
+speed_scale = 1.65
+randomness = 0.17
+lifetime_randomness = 0.28
+mesh = SubResource("BoxMesh_3u3ey")
+gravity = Vector3(1, 0, 0)
+initial_velocity_min = 60.61
+initial_velocity_max = 111.11
+scale_amount_min = 0.0
+color = Color(0.987573, 0.976317, 0.962664, 1)
+
+[node name="WeaponMeshHolder" type="Node3D" parent="."]
+
+[node name="Magnum_futuriste2" parent="WeaponMeshHolder" instance=ExtResource("2_52ra7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.6865e-09, 0, -0.130092)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00134976, 0.00873569, -0.191393)
+shape = SubResource("BoxShape3D_qr6iw")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(-2.39397e-08, 0, 0.547675, 0, 0.547675, 0, -0.547675, 0, -2.39397e-08, 0.0223095, 0, -0.0121878)
+stream = ExtResource("3_52ra7")

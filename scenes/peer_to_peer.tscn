@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://ce6ne6upuxdxh"]
+
+[ext_resource type="Script" uid="uid://ysuli3kwball" path="res://scripts/uis/PeerToPeer.cs" id="1_pru3m"]
+[ext_resource type="PackedScene" uid="uid://cdnxx8pcqb441" path="res://scenes/player.tscn" id="2_hbmxs"]
+
+[node name="PeerToPeer" type="Node2D" unique_id=345268005]
+script = ExtResource("1_pru3m")
+playerScene = ExtResource("2_hbmxs")
+
+[node name="Ui" type="Node2D" parent="." unique_id=2063873279]
+
+[node name="Host" type="Button" parent="Ui" unique_id=497062991]
+offset_left = 761.0
+offset_top = 256.0
+offset_right = 1125.0
+offset_bottom = 371.0
+text = "Host"
+
+[node name="Join" type="Button" parent="Ui" unique_id=2061917546]
+offset_left = 773.0
+offset_top = 541.0
+offset_right = 1122.0
+offset_bottom = 658.0
+text = "Join"
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="." unique_id=1185519030]
+_spawnable_scenes = PackedStringArray("uid://cdnxx8pcqb441")
+spawn_path = NodePath("..")
+
+[connection signal="pressed" from="Ui/Host" to="." method="_on_host_pressed"]
+[connection signal="pressed" from="Ui/Join" to="." method="_on_join_pressed"]

@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://b0ix2dkplrhgh"]
+
+[ext_resource type="Script" uid="uid://bqy3slutxsehv" path="res://scripts/Entities/enemies/MeleeEnemy.cs" id="1_tto48"]
+[ext_resource type="PackedScene" uid="uid://1oes7d2e5s6j" path="res://scenes/Weapons/Swords/ExoKatana.tscn" id="2_4jqra"]
+[ext_resource type="PackedScene" uid="uid://c8wh5qc6duaxk" path="res://3d-assets/Entities/Enemies/Soldat_militaire.glb" id="3_4jqra"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5ogc6"]
+radius = 0.230762
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uminx"]
+size = Vector3(2, 15.6377, 3)
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_fw8dd"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+
+[sub_resource type="SphereMesh" id="SphereMesh_tto48"]
+radius = 0.1
+height = 0.2
+
+[node name="MeleeEnemy" type="CharacterBody3D" unique_id=514750398 node_paths=PackedStringArray("PatrolPoints") groups=["Enemy"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+collision_layer = 12
+collision_mask = 15
+script = ExtResource("1_tto48")
+AttackRange = 1.5
+PatrolPoints = []
+_actualMesh = 3
+Speed = 2.0
+JumpForce = 9.0
+MaxHealth = 3
+Health = 3
+_weaponScene = ExtResource("2_4jqra")
+_weaponPositionOffset = Vector3(0.06, 0, -0.019)
+_weaponRotationOffset = Vector3(0, 180, 60)
+metadata/test_scene = "res://scenes/Maps/DEBUG_TestScene.tscn"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1065250245]
+shape = SubResource("CapsuleShape3D_5ogc6")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1506130453]
+
+[node name="Area3D" type="Area3D" parent="." unique_id=2104502106]
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=186536048]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, -0.0345936, -1.19209e-07, 0)
+shape = SubResource("BoxShape3D_uminx")
+
+[node name="Timer" type="Timer" parent="." unique_id=720479951]
+wait_time = 0.5
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="." unique_id=842841810]
+replication_config = SubResource("SceneReplicationConfig_fw8dd")
+
+[node name="MeshHolder" type="Node3D" parent="." unique_id=1947868146]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, -1, 0)
+
+[node name="Soldat_militaire" type="Node3D" parent="MeshHolder" unique_id=1527745716 instance=ExtResource("3_4jqra")]
+
+[node name="CursorPosition" type="Marker3D" parent="." unique_id=1718847801]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.70316, 0.242792, -0.058017)
+gizmo_extents = 3.03
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CursorPosition" unique_id=842493083]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0147834, -0.0235542, 0)
+visible = false
+mesh = SubResource("SphereMesh_tto48")
+skeleton = NodePath("../..")
+
+[connection signal="link_reached" from="NavigationAgent3D" to="." method="OnNavigationLinkReached"]
+[connection signal="body_entered" from="Area3D" to="." method="OnPlayerDetected"]
+[connection signal="body_exited" from="Area3D" to="." method="OnPlayerLost"]
+[connection signal="timeout" from="Timer" to="." method="OnAttackCooldown"]

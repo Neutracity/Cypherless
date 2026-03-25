@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dflagyiwmfa2p"
+path="res://.godot/imported/rocket launcher reload.mp3-67bc875edfd4f209b90d7dd1d2fd85b3.mp3str"
+
+[deps]
+
+source_file="res://Sounds/bruitages/bruitage armes/rocket launcher /rocket launcher reload.mp3"
+dest_files=["res://.godot/imported/rocket launcher reload.mp3-67bc875edfd4f209b90d7dd1d2fd85b3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

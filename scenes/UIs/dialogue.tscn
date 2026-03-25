@@ -1,0 +1,70 @@
+[gd_scene load_steps=4 format=3 uid="uid://ckdkgdn6hajt7"]
+
+[ext_resource type="Texture2D" uid="uid://7jukuit4tqyv" path="res://2d-assets/Other/empty_text_box.png" id="1_7hrl6"]
+[ext_resource type="Script" uid="uid://uyu8tesqrbqa" path="res://scripts/uis/DialogueBox.cs" id="1_fg3dv"]
+[ext_resource type="FontFile" uid="uid://b5j30u5mc8y57" path="res://2d-assets/Fonts/Audiowide - Police/Audiowide-Regular.ttf" id="2_kvb4c"]
+
+[node name="dialogue_overlay" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -5.0
+offset_top = -8.0
+offset_right = -5.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fg3dv")
+metadata/test_scene = "res://scenes/DEBUG_TestScene.tscn"
+
+[node name="dialogue_box" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -500.0
+offset_top = -250.0
+offset_right = 500.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("1_7hrl6")
+expand_mode = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="dialogue_box"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -8.0
+offset_top = 5.0
+offset_right = -8.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 120
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 120
+theme_override_constants/margin_bottom = 30
+
+[node name="dialogue_text" type="Label" parent="dialogue_box/MarginContainer"]
+custom_minimum_size = Vector2(400, 20)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_kvb4c")
+theme_override_font_sizes/font_size = 17
+text = "Bonjour, je suis David, le plus gros bg de Cypherless, aujourd'hui on va faire des crêpes avec le poto K7, et je vous propose pour cela de commencer par verser la farine dans le bol, puis l'eau, et la pate est prete !"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="name_label" type="Label" parent="dialogue_box"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.113
+anchor_top = 0.264
+anchor_right = 0.113
+anchor_bottom = 0.264
+offset_right = 40.0
+offset_bottom = 23.0

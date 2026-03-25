@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cdng1xg5urqvr"
+path="res://.godot/imported/sond menu principal.mp3-6621cf10c17fbe388a84f231339afe0b.mp3str"
+
+[deps]
+
+source_file="res://Sounds/musiques/sond menu principal.mp3"
+dest_files=["res://.godot/imported/sond menu principal.mp3-6621cf10c17fbe388a84f231339afe0b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

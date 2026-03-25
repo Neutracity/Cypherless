@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bkaq0v7efm8hv"]
+
+[ext_resource type="Script" uid="uid://bkbbd8wcqjtud" path="res://scripts/Sound/SoundManager.cs" id="1_7o7lk"]
+
+[node name="SoundManager" type="Node" unique_id=1237042018]
+script = ExtResource("1_7o7lk")
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=562574510]
+volume_db = -5.451
+autoplay = true

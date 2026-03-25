@@ -1,0 +1,118 @@
+[gd_scene load_steps=17 format=3 uid="uid://ba8be67ef4fwu"]
+
+[ext_resource type="Script" uid="uid://cyigfb80o46h5" path="res://scripts/uis/MainMenu.cs" id="1_pcind"]
+[ext_resource type="Texture2D" uid="uid://0ijbf31ymara" path="res://2d-assets/Logos/Logo Cypherless.png" id="2_b0w6t"]
+[ext_resource type="Texture2D" uid="uid://dd1lbfltmh7cm" path="res://2d-assets/Menus/main_menu_bg.png" id="2_o152i"]
+[ext_resource type="Texture2D" uid="uid://b1ks40f6yrx46" path="res://2d-assets/Buttons/solo-button.png" id="2_s35gt"]
+[ext_resource type="Texture2D" uid="uid://dx1ycbeqhd12d" path="res://2d-assets/Buttons/solo-selected-button.png" id="3_ce7xm"]
+[ext_resource type="Texture2D" uid="uid://b4n7std03f4m6" path="res://2d-assets/Buttons/multiplayer-button.png" id="4_tr15p"]
+[ext_resource type="Texture2D" uid="uid://1fcklr1vg8ia" path="res://2d-assets/Buttons/multiplayer-selected-button.png" id="5_46liu"]
+[ext_resource type="Texture2D" uid="uid://dj502oxphdq2y" path="res://2d-assets/Buttons/options-button.png" id="6_7w46r"]
+[ext_resource type="Texture2D" uid="uid://1ncbl578q8w0" path="res://2d-assets/Buttons/options-selected-button.png" id="7_7mg0j"]
+[ext_resource type="Texture2D" uid="uid://cihdwg8qxggel" path="res://2d-assets/Buttons/credits-button.png" id="8_jmtch"]
+[ext_resource type="Texture2D" uid="uid://cirojbnfkm14d" path="res://2d-assets/Buttons/credits-selected-button.png" id="9_f8scb"]
+[ext_resource type="Texture2D" uid="uid://cu7wswtr113fh" path="res://2d-assets/Buttons/leave-game-button.png" id="10_is228"]
+[ext_resource type="Texture2D" uid="uid://chf6rtmmrwf53" path="res://2d-assets/Buttons/leave-game-selected-button.png" id="11_7kwhe"]
+[ext_resource type="FontFile" uid="uid://drbtxw0ykfxk4" path="res://2d-assets/Fonts/Orbitron - Police/Orbitron-VariableFont_wght.ttf" id="12_8lxbq"]
+[ext_resource type="AudioStream" uid="uid://cdng1xg5urqvr" path="res://Sounds/musiques/sond menu principal.mp3" id="15_0aht8"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_pjqee"]
+font = ExtResource("12_8lxbq")
+
+[node name="main_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pcind")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_o152i")
+expand_mode = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="TextureRect"]
+layout_mode = 2
+anchor_left = 0.005
+anchor_top = 0.009
+anchor_right = 0.995
+anchor_bottom = 0.991
+offset_left = 0.4
+offset_top = 0.28
+offset_right = -0.400146
+offset_bottom = -0.280029
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 50
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="TextureRect/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="cypherless-logo" type="TextureRect" parent="TextureRect/ScrollContainer/VBoxContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(1200, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture = ExtResource("2_b0w6t")
+expand_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/ScrollContainer/VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="solo_button" type="TextureButton" parent="TextureRect/ScrollContainer/VBoxContainer/VBoxContainer2/VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_s35gt")
+texture_hover = ExtResource("3_ce7xm")
+
+[node name="multiplayer_button" type="TextureButton" parent="TextureRect/ScrollContainer/VBoxContainer/VBoxContainer2/VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_tr15p")
+texture_hover = ExtResource("5_46liu")
+
+[node name="settings_button" type="TextureButton" parent="TextureRect/ScrollContainer/VBoxContainer/VBoxContainer2/VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("6_7w46r")
+texture_hover = ExtResource("7_7mg0j")
+
+[node name="credits_button" type="TextureButton" parent="TextureRect/ScrollContainer/VBoxContainer/VBoxContainer2/VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("8_jmtch")
+texture_hover = ExtResource("9_f8scb")
+
+[node name="leave_button" type="TextureButton" parent="TextureRect/ScrollContainer/VBoxContainer/VBoxContainer2/VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("10_is228")
+texture_hover = ExtResource("11_7kwhe")
+
+[node name="copyrights_text" type="Label" parent="TextureRect/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "© 2025 Puffin Studio | Tous droits réservés."
+label_settings = SubResource("LabelSettings_pjqee")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_0aht8")
+volume_db = -7.776
+autoplay = true
+
+[connection signal="pressed" from="TextureRect/ScrollContainer/VBoxContainer/VBoxContainer2/VBoxContainer/solo_button" to="." method="_on_button_solo_pressed"]
+[connection signal="pressed" from="TextureRect/ScrollContainer/VBoxContainer/VBoxContainer2/VBoxContainer/multiplayer_button" to="." method="_on_button_multiplayer_pressed"]
+[connection signal="pressed" from="TextureRect/ScrollContainer/VBoxContainer/VBoxContainer2/VBoxContainer/settings_button" to="." method="_on_button_settings_pressed"]
+[connection signal="pressed" from="TextureRect/ScrollContainer/VBoxContainer/VBoxContainer2/VBoxContainer/credits_button" to="." method="_on_button_credits_pressed"]
+[connection signal="pressed" from="TextureRect/ScrollContainer/VBoxContainer/VBoxContainer2/VBoxContainer/leave_button" to="." method="_on_button_quit_pressed"]

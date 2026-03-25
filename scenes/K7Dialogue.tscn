@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bpi6ql577nmgk"]
+
+[ext_resource type="Script" uid="uid://dkxtq2xv7vjhl" path="res://scenes/K7Dialogue.cs" id="1_i8pkv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bcw8c"]
+size = Vector3(11.2485, 10.3409, 12.0675)
+
+[node name="Node3D4" type="StaticBody3D" unique_id=1770858931]
+collision_layer = 32
+collision_mask = 32
+script = ExtResource("1_i8pkv")
+PnjId = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2043472808]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.12426, 4.67047, -0.221828)
+shape = SubResource("BoxShape3D_bcw8c")
+debug_color = Color(0.67553, 0.50629, 0, 0.42)

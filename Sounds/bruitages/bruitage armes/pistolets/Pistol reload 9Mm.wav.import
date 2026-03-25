@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ddem0j5l42gyd"
+path="res://.godot/imported/Pistol reload 9Mm.wav-5a751c16c71a3641be169bfe6fa0f228.sample"
+
+[deps]
+
+source_file="res://Sounds/bruitages/bruitage armes/pistolets/Pistol reload 9Mm.wav"
+dest_files=["res://.godot/imported/Pistol reload 9Mm.wav-5a751c16c71a3641be169bfe6fa0f228.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

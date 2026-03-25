@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://draeycbj23qml"]
+
+[ext_resource type="Script" uid="uid://c5ig43dg4qu52" path="res://scripts/Entities/enemies/Ally.cs" id="1_lyi3q"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_a1b3k"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_qd865"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_w4fhy"]
+radius = 10.0
+
+[node name="Ally" type="CharacterBody3D" unique_id=1289702590]
+script = ExtResource("1_lyi3q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1041018845]
+shape = SubResource("CapsuleShape3D_a1b3k")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1269727357]
+mesh = SubResource("CapsuleMesh_qd865")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1935654571]
+
+[node name="Area3D" type="Area3D" parent="." unique_id=390783680]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=633905485]
+shape = SubResource("SphereShape3D_w4fhy")
+
+[node name="Marker3D" type="Marker3D" parent="." unique_id=1779902776]
+
+[node name="Timer" type="Timer" parent="." unique_id=1338333612]

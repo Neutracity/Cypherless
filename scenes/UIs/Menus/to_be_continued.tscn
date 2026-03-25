@@ -1,0 +1,94 @@
+[gd_scene load_steps=9 format=3 uid="uid://un5xke5rastk"]
+
+[ext_resource type="Texture2D" uid="uid://c4wqevofk4y0t" path="res://2d-assets/Logos/Logo Cypherless.png" id="1_w1o6e"]
+[ext_resource type="FontFile" uid="uid://drbtxw0ykfxk4" path="res://2d-assets/Fonts/Orbitron - Police/Orbitron-VariableFont_wght.ttf" id="2_mfm8b"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lv0nv"]
+bg_color = Color(0, 0, 0, 0.717647)
+
+[sub_resource type="LabelSettings" id="LabelSettings_gsi62"]
+font = ExtResource("2_mfm8b")
+font_size = 75
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t1qmr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dia7e"]
+bg_color = Color(0.834788, 0.355428, 1.92523e-07, 0.756863)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cdwdp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g3rkg"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="to_be_continued" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="shade" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_lv0nv")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -571.5
+offset_top = -457.0
+offset_right = 571.5
+offset_bottom = 457.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme_override_constants/margin_bottom = 78
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="cypherless_logo" type="TextureRect" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(1300, 0)
+layout_mode = 2
+texture = ExtResource("1_w1o6e")
+expand_mode = 5
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+text = "À suivre..."
+label_settings = SubResource("LabelSettings_gsi62")
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 18
+
+[node name="main_menu_button" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(500, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_fonts/font = ExtResource("2_mfm8b")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/focus = SubResource("StyleBoxEmpty_t1qmr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dia7e")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_cdwdp")
+theme_override_styles/normal = SubResource("StyleBoxFlat_g3rkg")
+text = "Menu principal"

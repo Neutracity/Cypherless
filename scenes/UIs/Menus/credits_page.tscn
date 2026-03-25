@@ -1,0 +1,170 @@
+[gd_scene load_steps=11 format=3 uid="uid://blobfyispt5q1"]
+
+[ext_resource type="Script" uid="uid://bbb1oq05n3sgb" path="res://scripts/uis/CreditsPage.cs" id="1_2prck"]
+[ext_resource type="FontFile" uid="uid://drbtxw0ykfxk4" path="res://2d-assets/Fonts/Orbitron - Police/Orbitron-VariableFont_wght.ttf" id="1_cmshj"]
+[ext_resource type="Texture2D" uid="uid://cq4723j2uunar" path="res://2d-assets/Menus/pages_bg.png" id="2_tvkm3"]
+[ext_resource type="Texture2D" uid="uid://b5qasb6dhxv18" path="res://2d-assets/Buttons/shape-007.png" id="3_iwual"]
+[ext_resource type="Texture2D" uid="uid://dfh2ni25l2rlm" path="res://2d-assets/Buttons/shape-007-hover.png" id="4_08wcq"]
+[ext_resource type="FontFile" uid="uid://yuxgs0ldvu0b" path="res://2d-assets/Fonts/Orbitron - Police/static/Orbitron-Regular.ttf" id="6_2h0tm"]
+[ext_resource type="FontFile" uid="uid://cht6pikb5jx4b" path="res://2d-assets/Fonts/Orbitron - Police/static/Orbitron-Bold.ttf" id="6_6x16g"]
+[ext_resource type="FontFile" uid="uid://b2uvxrcp5oucv" path="res://2d-assets/Fonts/Orbitron - Police/static/Orbitron-ExtraBold.ttf" id="6_m1ync"]
+[ext_resource type="FontFile" uid="uid://ciprfkrvxhqs6" path="res://2d-assets/Fonts/Orbitron - Police/static/Orbitron-Black.ttf" id="7_iko2h"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j4h6p"]
+
+[node name="credits_page" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2prck")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_tvkm3")
+expand_mode = 1
+
+[node name="credits" type="Label" parent="TextureRect"]
+layout_mode = 2
+anchor_left = 0.255
+anchor_top = 0.119
+anchor_right = 0.255
+anchor_bottom = 0.119
+offset_left = -119.6
+offset_top = -38.52
+offset_right = 120.4
+offset_bottom = 37.48
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("1_cmshj")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxEmpty_j4h6p")
+text = "Credits"
+
+[node name="back_button" type="TextureButton" parent="TextureRect"]
+z_index = 20
+z_as_relative = false
+layout_mode = 2
+anchor_left = 0.049
+anchor_top = 0.903
+anchor_right = 0.049
+anchor_bottom = 0.903
+offset_left = -25.08
+offset_top = -25.2401
+offset_right = 25.92
+offset_bottom = 25.7599
+size_flags_horizontal = 0
+size_flags_vertical = 8
+texture_normal = ExtResource("3_iwual")
+texture_pressed = ExtResource("3_iwual")
+texture_hover = ExtResource("4_08wcq")
+stretch_mode = 0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 2
+anchor_left = 0.121
+anchor_top = 0.252
+anchor_right = 0.881
+anchor_bottom = 0.739
+offset_left = 0.679993
+offset_top = -0.160004
+offset_right = -0.52002
+offset_bottom = -0.119995
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 60
+theme_override_constants/margin_right = 60
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+
+[node name="Label" type="RichTextLabel" parent="ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_fonts/normal_font = ExtResource("6_2h0tm")
+theme_override_fonts/italics_font = ExtResource("6_m1ync")
+theme_override_fonts/bold_italics_font = ExtResource("7_iko2h")
+theme_override_fonts/bold_font = ExtResource("6_6x16g")
+theme_override_font_sizes/bold_italics_font_size = 35
+theme_override_font_sizes/italics_font_size = 30
+theme_override_font_sizes/normal_font_size = 25
+theme_override_font_sizes/bold_font_size = 25
+bbcode_enabled = true
+text = "[center][b][i]Studio Puffin[/i][/b]
+
+
+[i]Direction[/i]
+
+[b]Chef de studio[/b]
+Olivier Serra
+[b]Directeur artistique[/b]
+Mathurin Proy
+[b]Chef de réalisation de projet[/b]
+John Venien
+[b]Trésorier[/b]
+Jean-Vincent Tran
+
+[i]Développement[/i]
+
+[b]Ingénieur IA[/b]
+Jean-Vincent Tran
+[b]Développeur site web[/b]
+John Venien
+[b]Réalisation multijoueur[/b]
+Olivier Serra
+
+[i]Art et animation[/i]
+
+[b]Designer interfaces[/b]
+Olivier Serra
+[b]Level designer[/b]
+Olivier Serra
+[b]Designer gameplay[/b]
+Mathurin Proy
+
+[i]Audio[/i]
+
+[b]Compositeur[/b]
+Hugo Shi
+
+[i]Scénario et écriture[/i]
+
+[b]Scénariste[/b]
+Hugo Shi
+[b]Designer narration[/b]
+Hugo Shi
+[b]Rédacteur[/b]
+Jean-Vincent Tran
+
+[i]Communication[/i]
+
+[b]Responsable de communication[/b]
+John Venien
+
+[b]Moteur de jeu[/b]
+
+Godot
+
+[b]Remerciements spéciaux[/b]
+
+\"À M. Boullay qui nous a tant éclairés\"
+
+[b]Mention finale[/b]
+
+\"Ce jeu est un travail de passionnés, créé par une petite équipe avec de grands rêves. Merci de jouer à Cypherless !\"[/center]"
+fit_content = true
+autowrap_mode = 2
+
+[connection signal="pressed" from="TextureRect/back_button" to="." method="_on_back_button_pressed"]

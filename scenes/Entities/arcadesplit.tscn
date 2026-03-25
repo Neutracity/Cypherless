@@ -1,0 +1,158 @@
+[gd_scene format=3 uid="uid://b7wxtly8iekpu"]
+
+[ext_resource type="Script" uid="uid://bs6f8ggfr4to" path="res://scripts/SplitScreen.cs" id="1_0jp1e"]
+[ext_resource type="PackedScene" uid="uid://cdnxx8pcqb441" path="res://scenes/player.tscn" id="2_1rubt"]
+[ext_resource type="Texture2D" uid="uid://bkneap0kbrosw" path="res://3d-assets/map/hdri/kloofendal_48d_partly_cloudy_puresky_2k.exr" id="2_hbhql"]
+[ext_resource type="PackedScene" uid="uid://cati231rfy5oq" path="res://scenes/stackofcardboard.tscn" id="4_7xflk"]
+[ext_resource type="PackedScene" uid="uid://blwcctun2iuup" path="res://3d-assets/Entities/Player/MixamoRigDavid.glb" id="4_8vaqe"]
+[ext_resource type="PackedScene" uid="uid://dqoh8mj2d6d8m" path="res://3d-assets/map/arcade/arcade.blend" id="5_7qrig"]
+[ext_resource type="PackedScene" uid="uid://cpfw8jldvu4o2" path="res://scenes/Entities/Ennemies/mechant.tscn" id="6_d0vsj"]
+[ext_resource type="PackedScene" uid="uid://qbtuotsxmpmh" path="res://scenes/UIs/Menus/pause_menu.tscn" id="7_8h6fj"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_to6et"]
+panorama = ExtResource("2_hbhql")
+
+[sub_resource type="Sky" id="Sky_nk1yy"]
+sky_material = SubResource("PanoramaSkyMaterial_to6et")
+
+[sub_resource type="Environment" id="Environment_lijfu"]
+background_mode = 2
+background_energy_multiplier = 0.5
+sky = SubResource("Sky_nk1yy")
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_85pyh"]
+dof_blur_far_distance = 38.5
+dof_blur_far_transition = 86.12
+dof_blur_near_enabled = true
+dof_blur_near_distance = 0.03
+dof_blur_near_transition = 406.59
+
+[node name="ArcadeSplit" type="Node" unique_id=1391848108]
+
+[node name="SplitScreen2" type="Node" parent="." unique_id=1556815298]
+script = ExtResource("1_0jp1e")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SplitScreen2" unique_id=1468671623]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="SplitScreen2/HBoxContainer" unique_id=126208983]
+layout_mode = 2
+
+[node name="SubViewport" type="SubViewport" parent="SplitScreen2/HBoxContainer/SubViewportContainer" unique_id=1273754182]
+handle_input_locally = false
+size = Vector2i(960, 1080)
+render_target_update_mode = 4
+
+[node name="Arcade" type="Node" parent="SplitScreen2/HBoxContainer/SubViewportContainer/SubViewport" unique_id=1932287512]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="SplitScreen2/HBoxContainer/SubViewportContainer/SubViewport/Arcade" unique_id=537923104]
+environment = SubResource("Environment_lijfu")
+camera_attributes = SubResource("CameraAttributesPractical_85pyh")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="SplitScreen2/HBoxContainer/SubViewportContainer/SubViewport/Arcade/WorldEnvironment" unique_id=1350819576]
+transform = Transform3D(0.806496, 0.49269, 0.326834, 0, -0.552795, 0.833318, 0.591239, -0.672067, -0.445827, -0.484932, 0.225281, 0)
+light_color = Color(1, 1, 0.768627, 1)
+light_energy = 0.27
+light_volumetric_fog_energy = 0.0
+shadow_enabled = true
+
+[node name="Player" parent="SplitScreen2/HBoxContainer/SubViewportContainer/SubViewport/Arcade" unique_id=1966620599 instance=ExtResource("2_1rubt")]
+transform = Transform3D(0.954755, 0, 0, 0, 0.954755, 0, 0, 0, 0.954755, -23.301, 0.1572, 0.975823)
+safe_margin = 0.005
+
+[node name="Camera3D" parent="SplitScreen2/HBoxContainer/SubViewportContainer/SubViewport/Arcade/Player" index="0" unique_id=2080405572]
+transform = Transform3D(1.04739, 0, 0, 0, 1.0434, 0.091286, 0, -0.091286, 1.0434, 0, 1.43689, 12.5752)
+
+[node name="K72" parent="SplitScreen2/HBoxContainer/SubViewportContainer/SubViewport/Arcade/Player" index="5" unique_id=535182680]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+top_level = false
+script = null
+
+[node name="K7" parent="SplitScreen2/HBoxContainer/SubViewportContainer/SubViewport/Arcade/Player/K72" index="0" unique_id=1221681746]
+transform = Transform3D(0.631025, 0, 0, 0, -0.631025, 2.05614e-07, 0, -2.05614e-07, -0.631025, -1.20133, -0.974045, -0.0120723)
+
+[node name="Skeleton3D" parent="SplitScreen2/HBoxContainer/SubViewportContainer/SubViewport/Arcade/Player/K72/K7" index="0" unique_id=1032137917]
+bones/4/rotation = Quaternion(1.42109e-14, -1.19209e-07, -5.04871e-29, 1)
+bones/11/rotation = Quaternion(1.04384e-08, -1.61987e-08, -0.0329458, 0.999457)
+bones/12/rotation = Quaternion(-0.0544138, -0.000253282, -0.176919, 0.98272)
+bones/13/rotation = Quaternion(-3.10124e-08, 1.93622e-08, 0.116767, 0.993159)
+bones/24/rotation = Quaternion(1.15376e-08, -1.73301e-08, 0.0329457, 0.999457)
+bones/25/rotation = Quaternion(-0.0593854, 0.0279898, 0.175312, 0.982322)
+bones/26/rotation = Quaternion(-2.33848e-08, 1.09332e-07, -0.116767, 0.993159)
+bones/27/rotation = Quaternion(-2.13295e-08, 0.714991, -0.699112, 0.00555407)
+bones/28/rotation = Quaternion(4.88462e-10, 0.714991, -0.699112, 0.00555407)
+
+[node name="AnimationPlayer" parent="SplitScreen2/HBoxContainer/SubViewportContainer/SubViewport/Arcade/Player/K72" index="1" unique_id=569953216]
+autoplay = &""
+
+[node name="MixamoRigDavid" type="Node3D" parent="SplitScreen2/HBoxContainer/SubViewportContainer/SubViewport/Arcade/Player/MeshHolder" parent_id_path=PackedInt32Array(1966620599, 1841274634) index="0" unique_id=221145922 instance=ExtResource("4_8vaqe")]
+
+[node name="arcade" parent="SplitScreen2/HBoxContainer/SubViewportContainer/SubViewport/Arcade" unique_id=1447430125 instance=ExtResource("5_7qrig")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+
+[node name="stackofcardboard" parent="SplitScreen2/HBoxContainer/SubViewportContainer/SubViewport/Arcade" unique_id=120441027 instance=ExtResource("4_7xflk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 1)
+
+[node name="stackofcardboard2" parent="SplitScreen2/HBoxContainer/SubViewportContainer/SubViewport/Arcade" unique_id=505428605 instance=ExtResource("4_7xflk")]
+transform = Transform3D(0.908698, 0, 0.417455, 0, 1, 0, -0.417455, 0, 0.908698, 7, 0, 1)
+
+[node name="stackofcardboard3" parent="SplitScreen2/HBoxContainer/SubViewportContainer/SubViewport/Arcade" unique_id=1241321100 instance=ExtResource("4_7xflk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.91206, 5.90503, 1.10153)
+
+[node name="SubViewportContainer2" type="SubViewportContainer" parent="SplitScreen2/HBoxContainer" unique_id=1078750817]
+layout_mode = 2
+
+[node name="SubViewport" type="SubViewport" parent="SplitScreen2/HBoxContainer/SubViewportContainer2" unique_id=1801112710]
+handle_input_locally = false
+size = Vector2i(960, 1080)
+render_target_update_mode = 4
+
+[node name="Player" parent="SplitScreen2/HBoxContainer/SubViewportContainer2/SubViewport" unique_id=513277800 instance=ExtResource("2_1rubt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.1988, -0.62453, 0.737788)
+PlayerIndex = 1
+
+[node name="Camera3D" parent="SplitScreen2/HBoxContainer/SubViewportContainer2/SubViewport/Player" index="0" unique_id=2080405572]
+transform = Transform3D(1, 0, 0, 0, 0.996195, 0.0871557, 0, -0.0871557, 0.996195, 0, 2.05513, 12.2819)
+
+[node name="K72" parent="SplitScreen2/HBoxContainer/SubViewportContainer2/SubViewport/Player" index="5" unique_id=535182680]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+top_level = false
+script = null
+
+[node name="K7" parent="SplitScreen2/HBoxContainer/SubViewportContainer2/SubViewport/Player/K72" index="0" unique_id=1221681746]
+transform = Transform3D(0.631025, 0, 0, 0, -0.631025, 2.05614e-07, 0, -2.05614e-07, -0.631025, -1.20133, -0.974045, -0.0120723)
+
+[node name="Skeleton3D" parent="SplitScreen2/HBoxContainer/SubViewportContainer2/SubViewport/Player/K72/K7" index="0" unique_id=1032137917]
+bones/4/rotation = Quaternion(1.42109e-14, -1.19209e-07, -5.04871e-29, 1)
+bones/11/rotation = Quaternion(1.04384e-08, -1.61987e-08, -0.0329458, 0.999457)
+bones/12/rotation = Quaternion(-0.0544138, -0.000253282, -0.176919, 0.98272)
+bones/13/rotation = Quaternion(-3.10124e-08, 1.93622e-08, 0.116767, 0.993159)
+bones/24/rotation = Quaternion(1.15376e-08, -1.73301e-08, 0.0329457, 0.999457)
+bones/25/rotation = Quaternion(-0.0593854, 0.0279898, 0.175312, 0.982322)
+bones/26/rotation = Quaternion(-2.33848e-08, 1.09332e-07, -0.116767, 0.993159)
+bones/27/rotation = Quaternion(-2.13295e-08, 0.714991, -0.699112, 0.00555407)
+bones/28/rotation = Quaternion(4.88462e-10, 0.714991, -0.699112, 0.00555407)
+
+[node name="AnimationPlayer" parent="SplitScreen2/HBoxContainer/SubViewportContainer2/SubViewport/Player/K72" index="1" unique_id=569953216]
+autoplay = &""
+
+[node name="MixamoRigDavid" type="Node3D" parent="SplitScreen2/HBoxContainer/SubViewportContainer2/SubViewport/Player/MeshHolder" parent_id_path=PackedInt32Array(513277800, 1841274634) index="0" unique_id=1898941974 instance=ExtResource("4_8vaqe")]
+
+[node name="Mechant" parent="SplitScreen2/HBoxContainer/SubViewportContainer2/SubViewport" unique_id=1950258810 instance=ExtResource("6_d0vsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.1162, -1.38759, 0.837433)
+
+[node name="stackofcardboard" parent="." unique_id=1598623738 instance=ExtResource("4_7xflk")]
+transform = Transform3D(0.360404, 0, -0.932796, 0, 1, 0, 0.932796, 0, 0.360404, -20.0713, 3.21328, 1.33998)
+
+[node name="pause_menu" parent="." unique_id=18173874 instance=ExtResource("7_8h6fj")]
+
+[editable path="SplitScreen2/HBoxContainer/SubViewportContainer/SubViewport/Arcade/Player"]
+[editable path="SplitScreen2/HBoxContainer/SubViewportContainer/SubViewport/Arcade/Player/K72"]
+[editable path="SplitScreen2/HBoxContainer/SubViewportContainer/SubViewport/Arcade/Player/K73"]
+[editable path="SplitScreen2/HBoxContainer/SubViewportContainer2/SubViewport/Player"]
+[editable path="SplitScreen2/HBoxContainer/SubViewportContainer2/SubViewport/Player/K72"]
+[editable path="SplitScreen2/HBoxContainer/SubViewportContainer2/SubViewport/Player/K73"]

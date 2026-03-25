@@ -1,0 +1,180 @@
+[gd_scene load_steps=14 format=3 uid="uid://qbtuotsxmpmh"]
+
+[ext_resource type="Script" uid="uid://d1brcb8hlq835" path="res://scripts/uis/PauseMenu.cs" id="1_e4lgy"]
+[ext_resource type="FontFile" uid="uid://drbtxw0ykfxk4" path="res://2d-assets/Fonts/Orbitron - Police/Orbitron-VariableFont_wght.ttf" id="2_kakdq"]
+[ext_resource type="Texture2D" uid="uid://c4wqevofk4y0t" path="res://2d-assets/Logos/Logo Cypherless.png" id="2_qdto1"]
+[ext_resource type="Texture2D" uid="uid://d1alstxaiw1ea" path="res://2d-assets/Other/shape-003.png" id="3_1on4f"]
+[ext_resource type="Script" uid="uid://cuvcintkd6hkb" path="res://scripts/uis/ip_displayer.cs" id="5_o1pwo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oocj2"]
+bg_color = Color(0, 0, 0, 0.313726)
+
+[sub_resource type="Gradient" id="Gradient_rlpao"]
+interpolation_mode = 2
+interpolation_color_space = 2
+offsets = PackedFloat32Array(0, 0.911765)
+colors = PackedColorArray(0.164706, 0.176471, 0.196078, 0, 0.164706, 0.176471, 0.196078, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_oni76"]
+gradient = SubResource("Gradient_rlpao")
+fill_from = Vector2(1, 0)
+fill_to = Vector2(0, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sjh01"]
+texture = SubResource("GradientTexture2D_oni76")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kr4ym"]
+bg_color = Color(0.834788, 0.355428, 1.92523e-07, 0.756863)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xc8tx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wa5k1"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jnhgx"]
+
+[node name="pause_menu" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_e4lgy")
+
+[node name="shade" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_oocj2")
+
+[node name="gradient" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 1920.0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_sjh01")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 600.0
+grow_vertical = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_bottom = 150
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="cypherless_logo" type="TextureRect" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_qdto1")
+expand_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="resume_button" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(500, 100)
+layout_mode = 2
+size_flags_vertical = 6
+focus_mode = 0
+theme_override_fonts/font = ExtResource("2_kakdq")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxFlat_kr4ym")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_xc8tx")
+theme_override_styles/normal = SubResource("StyleBoxFlat_wa5k1")
+text = "Reprendre"
+icon = ExtResource("3_1on4f")
+
+[node name="options_button" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(500, 100)
+layout_mode = 2
+size_flags_vertical = 6
+focus_mode = 0
+theme_override_fonts/font = ExtResource("2_kakdq")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxFlat_kr4ym")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_jnhgx")
+theme_override_styles/normal = SubResource("StyleBoxFlat_wa5k1")
+text = "Options"
+icon = ExtResource("3_1on4f")
+
+[node name="main_menu_button" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(500, 100)
+layout_mode = 2
+size_flags_vertical = 6
+focus_mode = 0
+theme_override_fonts/font = ExtResource("2_kakdq")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxFlat_kr4ym")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_jnhgx")
+theme_override_styles/normal = SubResource("StyleBoxFlat_wa5k1")
+text = "Menu principal"
+icon = ExtResource("3_1on4f")
+
+[node name="leave_button" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(500, 100)
+layout_mode = 2
+size_flags_vertical = 6
+focus_mode = 0
+theme_override_fonts/font = ExtResource("2_kakdq")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxFlat_kr4ym")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_jnhgx")
+theme_override_styles/normal = SubResource("StyleBoxFlat_wa5k1")
+text = "Quitter le jeu"
+icon = ExtResource("3_1on4f")
+
+[node name="multiplayer_info" type="MarginContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="multiplayer_info"]
+layout_mode = 2
+size_flags_vertical = 0
+script = ExtResource("5_o1pwo")
+
+[node name="ip_label" type="Label" parent="multiplayer_info/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_kakdq")
+theme_override_font_sizes/font_size = 20
+text = "Votre adresse IP :"
+horizontal_alignment = 1
+
+[node name="ip_adress" type="Label" parent="multiplayer_info/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_kakdq")
+theme_override_font_sizes/font_size = 20
+text = "0.0.0.0"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/resume_button" to="." method="_on_button_resume_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/options_button" to="." method="_on_button_options_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/main_menu_button" to="." method="_on_button_main_menu_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/leave_button" to="." method="_on_button_leave_game_pressed"]

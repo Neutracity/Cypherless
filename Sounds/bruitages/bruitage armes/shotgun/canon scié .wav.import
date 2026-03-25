@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bxmexp41ykmqa"
+path="res://.godot/imported/canon scié .wav-72c90628f211e692d9059f9631aacc47.sample"
+
+[deps]
+
+source_file="res://Sounds/bruitages/bruitage armes/shotgun/canon scié .wav"
+dest_files=["res://.godot/imported/canon scié .wav-72c90628f211e692d9059f9631aacc47.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

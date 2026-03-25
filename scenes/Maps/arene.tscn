@@ -1,0 +1,725 @@
+[gd_scene format=3 uid="uid://cionm64e5r8gy"]
+
+[ext_resource type="PackedScene" uid="uid://bvnxdealcq50g" path="res://3d-assets/map/MultiJoueur/Arenemultijoueur.glb" id="1_6gdxo"]
+[ext_resource type="LightmapGIData" uid="uid://dsg0s5e0b1oeu" path="res://scenes/Maps/arene.lmbake" id="2_ee02r"]
+[ext_resource type="Script" uid="uid://djudao7u182at" path="res://scripts/Entities/enemies/EnnemySpawner.cs" id="3_c0vyj"]
+[ext_resource type="PackedScene" uid="uid://b0ix2dkplrhgh" path="res://scenes/Entities/Ennemies/melee_enemy.tscn" id="4_fas4x"]
+[ext_resource type="PackedScene" uid="uid://dip3gg5xw38fd" path="res://scenes/Entities/Ennemies/ranged_enemy.tscn" id="5_p4mxr"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_fas4x"]
+vertices = PackedVector3Array(-18.0312, 9.63553, -1.91308, -18.0312, 9.63553, 28.5869, -15.7812, 9.63553, 28.5869, -15.7812, 9.63553, -1.91308, 9.21875, 10.8855, -1.91308, 9.21875, 10.8855, 28.5869, 11.2188, 10.8855, 28.5869, 11.2188, 10.8855, -1.91308, 123.719, 12.1355, -1.91308, 123.719, 12.1355, 28.5869, 125.719, 12.1355, 28.5869, 125.719, 12.1355, -1.91308, -52.0312, 4.63553, 8.58692, -52.0312, 4.63553, 41.0869, -19.2812, 26.8855, 41.0869, -19.2812, 26.8855, 8.58692, 136.469, 26.6355, 8.58692, 136.469, 26.6355, 41.0869, 169.469, 4.88553, 41.0869, 169.469, 4.88553, 8.58692, 147.947, 19.1355, 8.58692, 147.947, 19.1355, 41.0869, 139.446, 24.3855, 23.0995, 137.944, 25.3855, 9.56192, 137.949, 25.3855, 39.5765, 53.9688, 9.63553, 24.8369, 53.9688, 9.63553, 29.0869, 64.9688, 9.63553, 29.0869, 64.9688, 9.63553, 24.8369, 86.4688, 9.63553, 25.5869, 86.4688, 9.63553, 27.5869, 112.219, 9.63553, 27.5869, 112.219, 9.63553, 25.5869, -46.2812, 5.13553, 25.8369, -46.2812, 5.13553, 28.5869, 52.9688, 5.13553, 28.5869, 52.9688, 5.13553, 25.8369, 28.2188, 14.1355, 25.8369, 28.2188, 14.1355, 27.8369, 43.9688, 14.1355, 27.8369, 43.9688, 14.1355, 25.8369, 54.2188, 5.13553, 28.5869, 62.7188, 5.13553, 28.5869, 62.4688, 5.13553, 25.8369, 54.2188, 5.13553, 25.8369, 57.4688, 14.1355, 25.8369, 57.4688, 14.1355, 27.5869, 79.2188, 14.1355, 27.5869, 79.2188, 14.1355, 25.8369, 63.4688, 7.88553, 25.8369, 63.4688, 7.88553, 27.5869, 64.7188, 7.88553, 27.5869, 64.7188, 7.88553, 25.8369, 65.9688, 7.88553, 25.8369, 65.9688, 7.88553, 27.5869, 66.4688, 7.88553, 27.5869, 66.4688, 7.88553, 25.8369, 163.719, 5.13553, 28.5869, 163.719, 5.13553, 25.8369, 67.4688, 5.13553, 25.8369, 67.2188, 5.13553, 28.3369)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1), PackedInt32Array(7, 6, 4), PackedInt32Array(4, 6, 5), PackedInt32Array(11, 10, 8), PackedInt32Array(8, 10, 9), PackedInt32Array(15, 14, 12), PackedInt32Array(12, 14, 13), PackedInt32Array(18, 22, 19), PackedInt32Array(19, 22, 20), PackedInt32Array(20, 23, 16), PackedInt32Array(16, 22, 17), PackedInt32Array(17, 24, 21), PackedInt32Array(21, 22, 18), PackedInt32Array(22, 23, 20), PackedInt32Array(23, 22, 16), PackedInt32Array(22, 24, 17), PackedInt32Array(24, 22, 21), PackedInt32Array(28, 27, 25), PackedInt32Array(25, 27, 26), PackedInt32Array(32, 31, 29), PackedInt32Array(29, 31, 30), PackedInt32Array(36, 35, 33), PackedInt32Array(33, 35, 34), PackedInt32Array(40, 39, 37), PackedInt32Array(37, 39, 38), PackedInt32Array(44, 43, 41), PackedInt32Array(41, 43, 42), PackedInt32Array(48, 47, 45), PackedInt32Array(45, 47, 46), PackedInt32Array(52, 51, 49), PackedInt32Array(49, 51, 50), PackedInt32Array(56, 55, 53), PackedInt32Array(53, 55, 54), PackedInt32Array(58, 57, 59), PackedInt32Array(59, 57, 60)]
+geometry_parsed_geometry_type = 1
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c0vyj"]
+size = Vector3(217.378, 1, 3.57071)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fw7d5"]
+size = Vector3(40.5806, 1, 33.2566)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fas4x"]
+size = Vector3(16.4077, 0.231445, 2.67285)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p4mxr"]
+size = Vector3(22.5117, 0.289062, 2.59039)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_k8qv8"]
+size = Vector3(26.4688, 0.189331, 2.66821)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_w0s15"]
+size = Vector3(2.8224, 0.463409, 31.3215)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xkihn"]
+size = Vector3(11.6808, 4.36643, 5.134)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e5l31"]
+size = Vector3(3.85913, 2.40326, 2.51654)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fsvrb"]
+size = Vector3(240.886, 24, 1.72449)
+
+[node name="Arene" type="Node3D" unique_id=1461829598]
+metadata/test_scene = "res://scenes/UIs/Menus/multiplayer_menu.tscn"
+
+[node name="Arene multijoueur" parent="." unique_id=772167603 instance=ExtResource("1_6gdxo")]
+transform = Transform3D(0.629544, 0, 0, 0, 0.629544, 0, 0, 0, 0.629544, 0, 0, -17.5131)
+
+[node name="LightmapGI" type="LightmapGI" parent="Arene multijoueur" unique_id=47184719]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.523295, 0.22434, 0.103416)
+interior = true
+light_data = ExtResource("2_ee02r")
+
+[node name="Node3D" type="Node3D" parent="Arene multijoueur/LightmapGI" unique_id=875590068]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.523295, -0.22434, -0.103416)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D" unique_id=619644627]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 26.7629)
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D" unique_id=810016459]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 28.8417)
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D" unique_id=36487162]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 24.8397)
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D" unique_id=673717104]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 22.6175)
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D" unique_id=770855067]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 20.7085)
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D" unique_id=488728353]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 18.6732)
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D7" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D" unique_id=1139609656]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 16.7137)
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D8" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D" unique_id=834032865]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 14.3583)
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D9" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D" unique_id=1249087569]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 12.1885)
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D10" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D" unique_id=885943132]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 10.4688)
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D11" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D" unique_id=1552579057]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 8.54983)
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D12" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D" unique_id=2070296849]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 6.39228)
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D13" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D" unique_id=1651829825]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 4.32892)
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D14" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D" unique_id=1026270207]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 2.29407)
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D15" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D" unique_id=23480286]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 0.209412)
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D16" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D" unique_id=448199457]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, -1.56095)
+light_indirect_energy = 5.745
+
+[node name="Node3D2" type="Node3D" parent="Arene multijoueur/LightmapGI" unique_id=522057599]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.6491, -1.093, -0.103416)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D2" unique_id=1301686513]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 26.7629)
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D2" unique_id=624294993]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 28.8417)
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D2" unique_id=199794745]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 24.8397)
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D2" unique_id=1679171412]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 22.6175)
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D2" unique_id=1792540428]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 20.7085)
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D2" unique_id=2130582555]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 18.6732)
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D7" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D2" unique_id=1954452398]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 16.7137)
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D8" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D2" unique_id=455130747]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 14.3583)
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D9" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D2" unique_id=1020048200]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 12.1885)
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D10" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D2" unique_id=910739162]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 10.4688)
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D11" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D2" unique_id=1346458960]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 8.54983)
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D12" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D2" unique_id=124335314]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 6.39228)
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D13" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D2" unique_id=415114788]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 4.32892)
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D14" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D2" unique_id=1094568126]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 2.29407)
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D15" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D2" unique_id=1035380588]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 0.209412)
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D16" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D2" unique_id=198877053]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, -1.56095)
+light_indirect_energy = 5.745
+
+[node name="Node3D3" type="Node3D" parent="Arene multijoueur/LightmapGI" unique_id=247703547]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 115.044, 1.50546, -0.491306)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D3" unique_id=1510325341]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 26.7629)
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D3" unique_id=306072344]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 28.8417)
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D3" unique_id=1991196262]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 24.8397)
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D3" unique_id=396943186]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 22.6175)
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D3" unique_id=371518846]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 20.7085)
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D3" unique_id=1343174539]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 18.6732)
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D7" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D3" unique_id=371749997]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 16.7137)
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D8" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D3" unique_id=1862347188]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 14.3583)
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D9" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D3" unique_id=873497557]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 12.1885)
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D10" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D3" unique_id=1436874253]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 10.4688)
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D11" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D3" unique_id=898337614]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 8.54983)
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D12" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D3" unique_id=749415518]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 6.39228)
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D13" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D3" unique_id=1068166587]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 4.32892)
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D14" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D3" unique_id=2069485673]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 2.29407)
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D15" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D3" unique_id=2113467613]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 0.209412)
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D16" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D3" unique_id=535431236]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, -1.56095)
+light_indirect_energy = 5.745
+
+[node name="Node3D7" type="Node3D" parent="Arene multijoueur/LightmapGI" unique_id=343048819]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 113.666, -1.23129, 15.9087)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D7" unique_id=302389199]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 26.7629)
+light_energy = 0.167
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D7" unique_id=4638269]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 28.8417)
+light_energy = 0.167
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D7" unique_id=1911342883]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 24.8397)
+light_energy = 0.167
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D7" unique_id=385371995]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 22.6175)
+light_energy = 0.167
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D7" unique_id=1398738384]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 20.7085)
+light_energy = 0.167
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D7" unique_id=1407716926]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 18.6732)
+light_energy = 0.167
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D7" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D7" unique_id=371338570]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 16.7137)
+light_energy = 0.167
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D8" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D7" unique_id=601109344]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 14.3583)
+light_energy = 0.167
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D9" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D7" unique_id=1839196056]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 12.1885)
+light_energy = 0.167
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D10" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D7" unique_id=1595236337]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 10.4688)
+light_energy = 0.167
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D11" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D7" unique_id=393962356]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 8.54983)
+light_energy = 0.167
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D12" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D7" unique_id=127166512]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 6.39228)
+light_energy = 0.167
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D13" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D7" unique_id=1979217991]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 4.32892)
+light_energy = 0.167
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D14" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D7" unique_id=961598270]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 2.29407)
+light_energy = 0.167
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D15" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D7" unique_id=127832100]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 0.209412)
+light_energy = 0.167
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D16" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D7" unique_id=486496716]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, -1.56095)
+light_energy = 0.167
+light_indirect_energy = 5.745
+
+[node name="Node3D8" type="Node3D" parent="Arene multijoueur/LightmapGI" unique_id=628825812]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 80.051, 3.60491, 15.9309)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D8" unique_id=436691370]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 26.7629)
+light_energy = 0.167
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D8" unique_id=1444499882]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 28.8417)
+light_energy = 0.167
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D8" unique_id=1931679449]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 24.8397)
+light_energy = 0.167
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D8" unique_id=533560190]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 22.6175)
+light_energy = 0.167
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D8" unique_id=1452472310]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 20.7085)
+light_energy = 0.167
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D8" unique_id=867659080]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 18.6732)
+light_energy = 0.167
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D7" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D8" unique_id=2146798180]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 16.7137)
+light_energy = 0.167
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D8" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D8" unique_id=1918345675]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 14.3583)
+light_energy = 0.167
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D9" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D8" unique_id=1470163716]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 12.1885)
+light_energy = 0.167
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D10" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D8" unique_id=966351813]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 10.4688)
+light_energy = 0.167
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D11" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D8" unique_id=2089817236]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 8.54983)
+light_energy = 0.167
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D12" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D8" unique_id=359788800]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 6.39228)
+light_energy = 0.167
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D13" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D8" unique_id=765656685]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 4.32892)
+light_energy = 0.167
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D14" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D8" unique_id=1913705999]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 2.29407)
+light_energy = 0.167
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D15" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D8" unique_id=1597720694]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 0.209412)
+light_energy = 0.167
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D16" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D8" unique_id=1657716230]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, -1.56095)
+light_energy = 0.167
+light_indirect_energy = 5.745
+
+[node name="Node3D4" type="Node3D" parent="Arene multijoueur/LightmapGI" unique_id=933932824]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 57.5281, 3.50482, 16.0719)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D4" unique_id=2067302722]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 26.7629)
+light_energy = 0.227
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D4" unique_id=285720848]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 28.8417)
+light_energy = 0.227
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D4" unique_id=163191910]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 24.8397)
+light_energy = 0.227
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D4" unique_id=2098434387]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 22.6175)
+light_energy = 0.227
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D4" unique_id=194457867]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 20.7085)
+light_energy = 0.227
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D4" unique_id=2115802126]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 18.6732)
+light_energy = 0.227
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D7" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D4" unique_id=1635611544]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 16.7137)
+light_energy = 0.227
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D8" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D4" unique_id=521477903]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 14.3583)
+light_energy = 0.227
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D9" type="OmniLight3D" parent="Arene multijoueur/LightmapGI/Node3D4" unique_id=1575560678]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1991, 10.5794, 12.1885)
+light_energy = 0.227
+light_indirect_energy = 5.745
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Arene multijoueur/LightmapGI" unique_id=295311173]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70.2772, 7.86462, 9.4311)
+light_color = Color(1, 0.231373, 1, 1)
+light_energy = 0.727
+omni_range = 15.3284
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Arene multijoueur/LightmapGI" unique_id=825250384]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72.762, 7.86462, 11.0094)
+light_color = Color(1, 0.231373, 1, 1)
+light_energy = 0.727
+omni_range = 15.3284
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="Arene multijoueur/LightmapGI" unique_id=684013825]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 76.2979, 7.86462, 8.02587)
+light_color = Color(1, 0.231373, 1, 1)
+light_energy = 0.727
+omni_range = 15.3284
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="Arene multijoueur/LightmapGI" unique_id=1108112185]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 81.7474, 5.43438, 11.3035)
+light_color = Color(1, 0.231373, 1, 1)
+light_energy = 0.727
+omni_range = 15.3284
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="Arene multijoueur/LightmapGI" unique_id=1754130256]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 85.9814, 5.43438, 11.3035)
+light_color = Color(1, 0.231373, 1, 1)
+light_energy = 0.727
+omni_range = 15.3284
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="Arene multijoueur/LightmapGI" unique_id=551687529]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.7312, 7.32696, 26.7374)
+light_color = Color(1, 0.231373, 1, 1)
+light_energy = 0.727
+distance_fade_enabled = true
+distance_fade_begin = 112.99
+distance_fade_length = 659.71
+omni_range = 9.49626
+
+[node name="Node3D5" type="Node3D" parent="Arene multijoueur/LightmapGI" unique_id=1385948950]
+transform = Transform3D(0.866025, 1.49012e-08, -0.5, 0.5, -2.58096e-08, 0.866025, 0, -1, -2.98023e-08, -34.2922, 13.763, 32.2775)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Arene multijoueur/LightmapGI/Node3D5" unique_id=1990194035]
+light_energy = 16.0
+spot_range = 17.2231
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="Arene multijoueur/LightmapGI/Node3D5" unique_id=404581346]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20.7379, 1.90735e-06)
+light_energy = 16.0
+spot_range = 17.2231
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="Arene multijoueur/LightmapGI/Node3D5" unique_id=557995585]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 42.8488, 1.90735e-06)
+light_energy = 16.0
+spot_range = 17.2231
+
+[node name="Node3D6" type="Node3D" parent="Arene multijoueur/LightmapGI" unique_id=1872779850]
+transform = Transform3D(-0.865855, -4.48431e-05, 0.500296, 0.500296, -0.000546249, 0.865854, 0.000234451, 1, 0.000495405, 151.529, 13.763, -10.2284)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Arene multijoueur/LightmapGI/Node3D6" unique_id=66943189]
+light_energy = 16.0
+spot_range = 17.2231
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="Arene multijoueur/LightmapGI/Node3D6" unique_id=1542784258]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20.7379, 1.90735e-06)
+light_energy = 16.0
+spot_range = 17.2231
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="Arene multijoueur/LightmapGI/Node3D6" unique_id=1294045835]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 42.8488, 1.90735e-06)
+light_energy = 16.0
+spot_range = 17.2231
+
+[node name="OmniLight3D7" type="OmniLight3D" parent="Arene multijoueur/LightmapGI" unique_id=407921236]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 61.7236, 19.0291, 20.0355)
+omni_range = 61.7503
+
+[node name="Roofline" type="Node3D" parent="Arene multijoueur/LightmapGI" unique_id=716134184]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Arene multijoueur/LightmapGI/Roofline" unique_id=663875839]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 67.9143, 24.4479, -6.58859)
+light_color = Color(1, 1, 0.894118, 1)
+spot_range = 59.559
+spot_angle = 75.42
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="Arene multijoueur/LightmapGI/Roofline" unique_id=2070566396]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 39.275, 24.4479, -6.58859)
+light_color = Color(1, 1, 0.894118, 1)
+spot_range = 59.559
+spot_angle = 75.42
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="Arene multijoueur/LightmapGI/Roofline" unique_id=2029935631]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 5.30564, 24.4479, -6.58859)
+light_color = Color(1, 1, 0.894118, 1)
+spot_range = 59.559
+spot_angle = 75.42
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="Arene multijoueur/LightmapGI/Roofline" unique_id=1691137621]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 96.2523, 24.4479, -6.58859)
+light_color = Color(1, 1, 0.894118, 1)
+spot_range = 59.559
+spot_angle = 75.42
+
+[node name="SpotLight3D5" type="SpotLight3D" parent="Arene multijoueur/LightmapGI/Roofline" unique_id=1129219004]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 126.888, 24.4479, -6.58859)
+light_color = Color(1, 1, 0.894118, 1)
+spot_range = 59.559
+spot_angle = 75.42
+
+[node name="Roofline2" type="Node3D" parent="Arene multijoueur/LightmapGI" unique_id=544853473]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.41452, -0.0813446, 34.4624)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Arene multijoueur/LightmapGI/Roofline2" unique_id=1792104155]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 67.9143, 24.4479, -6.58859)
+light_color = Color(1, 1, 0.894118, 1)
+spot_range = 59.559
+spot_angle = 75.42
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="Arene multijoueur/LightmapGI/Roofline2" unique_id=1682935942]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 39.275, 24.4479, -6.58859)
+light_color = Color(1, 1, 0.894118, 1)
+spot_range = 59.559
+spot_angle = 75.42
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="Arene multijoueur/LightmapGI/Roofline2" unique_id=1866841627]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 5.30564, 24.4479, -6.58859)
+light_color = Color(1, 1, 0.894118, 1)
+spot_range = 59.559
+spot_angle = 75.42
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="Arene multijoueur/LightmapGI/Roofline2" unique_id=1542588301]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 96.2523, 24.4479, -6.58859)
+light_color = Color(1, 1, 0.894118, 1)
+spot_range = 59.559
+spot_angle = 75.42
+
+[node name="SpotLight3D5" type="SpotLight3D" parent="Arene multijoueur/LightmapGI/Roofline2" unique_id=1160787748]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 126.888, 24.4479, -6.58859)
+light_color = Color(1, 1, 0.894118, 1)
+spot_range = 59.559
+spot_angle = 75.42
+
+[node name="Colision" type="Node3D" parent="Arene multijoueur" unique_id=2007103231]
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="Arene multijoueur/Colision" unique_id=536909434]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.18349e-08, 0, -5.91744e-09)
+navigation_mesh = SubResource("NavigationMesh_fas4x")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Arene multijoueur/Colision/NavigationRegion3D" unique_id=689436252]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0646362, -0.0661392, 0.0316696)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Arene multijoueur/Colision/NavigationRegion3D/StaticBody3D" unique_id=1862623873]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.4256, 4.31712, 27.1449)
+shape = SubResource("BoxShape3D_c0vyj")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Arene multijoueur/Colision/NavigationRegion3D/StaticBody3D" unique_id=2139318127]
+transform = Transform3D(0.825754, -0.564031, 0, 0.564031, 0.825754, 0, 0, 0, 1, -35.4298, 14.8089, 24.8314)
+shape = SubResource("BoxShape3D_fw7d5")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Arene multijoueur/Colision/NavigationRegion3D/StaticBody3D" unique_id=896168889]
+transform = Transform3D(-0.833356, -0.552737, 0, 0.552737, -0.833356, 0, 0, 0, 1, 152.788, 14.8089, 24.8314)
+shape = SubResource("BoxShape3D_fw7d5")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Arene multijoueur/Colision/NavigationRegion3D/StaticBody3D" unique_id=1668300116]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.1007, 13.7958, 26.7902)
+shape = SubResource("BoxShape3D_fas4x")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="Arene multijoueur/Colision/NavigationRegion3D/StaticBody3D" unique_id=1131123882]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.1007, 13.7958, 26.7902)
+shape = SubResource("BoxShape3D_fas4x")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="Arene multijoueur/Colision/NavigationRegion3D/StaticBody3D" unique_id=279875683]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68.4388, 13.763, 26.6499)
+shape = SubResource("BoxShape3D_p4mxr")
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="Arene multijoueur/Colision/NavigationRegion3D/StaticBody3D" unique_id=770334229]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 99.3208, 9.31855, 26.6018)
+shape = SubResource("BoxShape3D_k8qv8")
+
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="Arene multijoueur/Colision/NavigationRegion3D/StaticBody3D" unique_id=133115588]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 124.781, 11.7164, 13.2716)
+shape = SubResource("BoxShape3D_w0s15")
+
+[node name="CollisionShape3D9" type="CollisionShape3D" parent="Arene multijoueur/Colision/NavigationRegion3D/StaticBody3D" unique_id=383613503]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2659, 10.2785, 13.216)
+shape = SubResource("BoxShape3D_w0s15")
+
+[node name="CollisionShape3D10" type="CollisionShape3D" parent="Arene multijoueur/Colision/NavigationRegion3D/StaticBody3D" unique_id=1756280837]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.8213, 9.14251, 13.216)
+shape = SubResource("BoxShape3D_w0s15")
+
+[node name="CollisionShape3D11" type="CollisionShape3D" parent="Arene multijoueur/Colision/NavigationRegion3D/StaticBody3D" unique_id=1058679296]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.5191, 7.041, 26.9768)
+shape = SubResource("BoxShape3D_xkihn")
+
+[node name="CollisionShape3D12" type="CollisionShape3D" parent="Arene multijoueur/Colision/NavigationRegion3D/StaticBody3D" unique_id=943854319]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.0507, 6.45851, 26.7189)
+shape = SubResource("BoxShape3D_e5l31")
+
+[node name="NavigationObstacle3D" type="NavigationObstacle3D" parent="Arene multijoueur/Colision/NavigationRegion3D" unique_id=1806575208]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.96776, 5.61041, 24.7063)
+vertices = PackedVector3Array(-12.2223, 0, 0.0948906, -29.0418, 0, -0.0362301, -36.7962, 0, 0.320686, -56.057, 0, 10.315, -58.9729, 0, 3.72745, -81.7106, 0, -9.29934, -12.3581, 0, -5.52534, 10.542, 0, -4.12521, 37.8301, 0, -4.53424, 66.2465, 0, -3.81341, 135.67, 0, -4.49502, 142.082, 0, -1.12012, 140.02, 0, 0.533913, 44.955, 0, 0.383837, -6.81029, 0, 0.458923)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Arene multijoueur/Colision" unique_id=1932472058]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Arene multijoueur/Colision/StaticBody3D" unique_id=1149272280]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57.7437, 14.6769, 24.189)
+shape = SubResource("BoxShape3D_fsvrb")
+
+[node name="Spawner" type="Node3D" parent="Arene multijoueur" unique_id=1190313160]
+
+[node name="Marker3D" type="Marker3D" parent="Arene multijoueur/Spawner" unique_id=874339585]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.1563, 5.42753, 27.5629)
+visible = false
+script = ExtResource("3_c0vyj")
+MeleeEnemyScene = ExtResource("4_fas4x")
+RangedEnemyScene = ExtResource("5_p4mxr")
+
+[node name="Marker3D2" type="Marker3D" parent="Arene multijoueur/Spawner" unique_id=1321223504]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.5446, 5.17944, 27.4841)
+visible = false
+script = ExtResource("3_c0vyj")
+MeleeEnemyScene = ExtResource("4_fas4x")
+RangedEnemyScene = ExtResource("5_p4mxr")
+
+[node name="Marker3D3" type="Marker3D" parent="Arene multijoueur/Spawner" unique_id=1841670796]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.1164, 14.3125, 26.5001)
+visible = false
+script = ExtResource("3_c0vyj")
+MeleeEnemyScene = ExtResource("4_fas4x")
+RangedEnemyScene = ExtResource("5_p4mxr")
+
+[node name="Marker3D4" type="Marker3D" parent="Arene multijoueur/Spawner" unique_id=469430690]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68.0421, 14.1056, 26.7414)
+visible = false
+script = ExtResource("3_c0vyj")
+MeleeEnemyScene = ExtResource("4_fas4x")
+RangedEnemyScene = ExtResource("5_p4mxr")
+
+[node name="Marker3D5" type="Marker3D" parent="Arene multijoueur/Spawner" unique_id=2137240014]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 98.3945, 9.58463, 26.5792)
+visible = false
+script = ExtResource("3_c0vyj")
+MeleeEnemyScene = ExtResource("4_fas4x")
+RangedEnemyScene = ExtResource("5_p4mxr")
+
+[node name="Marker3D6" type="Marker3D" parent="Arene multijoueur/Spawner" unique_id=1028952164]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 124.755, 5.67344, 26.8483)
+visible = false
+script = ExtResource("3_c0vyj")
+MeleeEnemyScene = ExtResource("4_fas4x")
+RangedEnemyScene = ExtResource("5_p4mxr")
+
+[node name="SpawnPoint" type="Marker3D" parent="." unique_id=381754117]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.6682, 9.90478, -0.698902)
+
+[editable path="Arene multijoueur"]

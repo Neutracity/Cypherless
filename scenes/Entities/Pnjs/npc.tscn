@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://c5fij3ki2uvip"]
+
+[ext_resource type="Script" uid="uid://bgbbn6wnrogrg" path="res://scripts/NpcBody.cs" id="1_wg10l"]
+[ext_resource type="PackedScene" uid="uid://bsgmtu15qscvn" path="res://3d-assets/Entities/Enemies/Swatguy.glb" id="2_4sjui"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qxyn6"]
+radius = 0.234228
+
+[node name="NPC" type="CharacterBody3D" unique_id=240898842]
+collision_layer = 0
+script = ExtResource("1_wg10l")
+Speed = 2.0
+_actualMesh = 15
+Speed = 2.0
+MaxHealth = 100000
+Health = 100000
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2063039028]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_qxyn6")
+
+[node name="Timer" type="Timer" parent="." unique_id=660366839]
+
+[node name="MeshHolder" type="Node3D" parent="." unique_id=1122645709]
+
+[node name="Swatguy" type="Node3D" parent="MeshHolder" unique_id=315194843 instance=ExtResource("2_4sjui")]
