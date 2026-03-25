@@ -1,6 +1,7 @@
 <p align="center">
 <img src="./2d-assets/preview-assets/K7-Cartoon-Transparent.png" width="500" height="300" alt="K7 picture">
 </p>
+
 # Cypherless
 
 Cypherless is a 3D action-platformer and hacking game developed with Godot Engine 4.3. The project implements complex gameplay systems in C\#, ranging from a state-based artificial intelligence architecture to a modular combat system. This repository represents the technical culmination of Studio Puffin's work at EPITA.
