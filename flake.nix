@@ -17,6 +17,7 @@
         inherit system;
         config.allowUnfree = true;
       };
+      dotnet-sdk = pkgs.dotnet-sdk_8;
     in
     {
       devShells.${system}.default = pkgs.mkShell {
@@ -24,6 +25,11 @@
         buildInputs = with pkgs; [
           godotPackages_4_6.godot-mono
           jetbrains.rider
+          dotnet-sdk
+          mono
+
+          msbuild
+          nuget
         ];
 
       };
