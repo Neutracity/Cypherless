@@ -58,7 +58,7 @@ The project integrates a networking solution for cooperative play:
 ## Tech Stack
 
 - Engine: Godot Engine 4.6 (.NET Edition)  
-- Language: C\# 10 / .NET 6  
+- Language: C\# 10 / .NET 8  
 - Third-party tools: JetBrains Rider, Blender, Adobe Mixamo
 
 ## Installation
@@ -73,7 +73,7 @@ nix develop
 
 ### Standard Installation
 
-1. Ensure the .NET 6.0 SDK is installed on your machine.
+1. Ensure the .NET 8 SDK is installed on your machine.
 2. Clone the repository: git clone https://github.com/neutracity/cypherless.git.  
 3. Import the project into Godot Engine 4.6. 
 4. Build the C\# solution via the MSBuild tab.  
