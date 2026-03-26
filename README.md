@@ -63,14 +63,6 @@ The project integrates a networking solution for cooperative play:
 
 ## Installation
 
-1. Ensure the .NET 6.0 SDK is installed on your machine.
-2. Clone the repository: git clone https://github.com/neutracity/cypherless.git.  
-3. Import the project into Godot Engine 4.6. 
-4. Build the C\# solution via the MSBuild tab.  
-5. Run the Game.tscn scene.
-
-## Installation
-
 ### Using Nix (Recommended)
 
 If you have Nix installed with flakes enabled, you can enter a fully reproducible development shell containing all necessary dependencies (including Godot and the .NET SDK) by running:
